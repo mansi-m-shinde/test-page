@@ -12,6 +12,17 @@ header {
   text-align: center;
 }
 
+header {
+  width: 100%;
+  overflow: hidden; /* Ensure the image doesn't overflow horizontally */
+}
+
+.header-image {
+  display: block;
+  width: 100%; /* Make the image take up 100% of the width */
+  height: auto; /* Maintain aspect ratio */
+}
+
 nav ul {
   list-style: none;
   padding: 0;
