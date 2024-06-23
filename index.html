@@ -12,6 +12,25 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-XXXXXXXXX-X');
+
+    // Timer functionality
+    function stopTimer() {
+      let loginTime = localStorage.getItem('loginTime');
+      if (loginTime) {
+        let endTime = new Date().getTime();
+        let timeSpent = (endTime - loginTime) / 1000; // Time in seconds
+
+        // Send custom event to Google Analytics
+        gtag('event', 'time_spent', {
+          'event_category': 'Engagement',
+          'event_label': 'Time Spent Between Login and Add to Cart',
+          'value': timeSpent
+        });
+
+        alert(`Time spent: ${timeSpent} seconds`);
+        localStorage.removeItem('loginTime'); // Clear the timer
+      }
+    }
   </script>
 </head>
 <body>
@@ -31,13 +50,13 @@
         <img src="ysl-handbag-1.jpg" alt="Handbag 1">
         <h2>Handbag 1</h2>
         <p>$1500</p>
-        <button onclick="startTimer()">Add to Cart</button>
+        <button onclick="stopTimer()">Add to Cart</button>
       </article>
       <article class="product-item">
         <img src="ysl-handbag-2.jpg" alt="Handbag 2">
         <h2>Handbag 2</h2>
         <p>$1800</p>
-        <button onclick="startTimer()">Add to Cart</button>
+        <button onclick="stopTimer()">Add to Cart</button>
       </article>
       <!-- Add more products as needed -->
     </section>
@@ -45,6 +64,5 @@
   <footer>
     <p>&copy; 2024 Luxury Handbags</p>
   </footer>
-  <script src="scripts.js"></script>
 </body>
 </html>
