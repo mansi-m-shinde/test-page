@@ -3,10 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Luxury Handbags</title>
+  <title>Luxury Handbags</title>
   <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXXXX-X');
+    
+    // Initialize cart and product count
+    let cart = new Set();
+    let timerInterval;
+    let timeLeft = 300; // 5 minutes in seconds
+
+    function startTimer() {
+      localStorage.setItem('loginTime', new Date().getTime());
+      timerInterval = setInterval(updateTimer, 1000);
+    }
+
+    function updateTimer() {
+      let minutes = Math.floor(timeLeft / 60);
+      let seconds = timeLeft % 60;
+      document.getElementById('timer').textContent = `Time left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+      
+      if (timeLeft <= 0) {
+        alert(`TIME OVER!! Please start again.`);
+        clearInterval(timerInterval);
+        endSession();
+      } else {
+        timeLeft--;
+      }
+    }
+
+    // Check  three products added
+    function addToCart(productId) {
+      cart.add(productId);
+      
+      if (cart.size === 3) {
+        endSession();
+      }
+    }
+
+    function endSession() {
+      clearInterval(timerInterval);
+      let loginTime = localStorage.getItem('loginTime');
+      if (loginTime) {
+        let endTime = new Date().getTime();
+        let timeSpent = (endTime - loginTime) / 1000; // Time in seconds
+
+        gtag('event', 'time_spent', {
+          'event_category': 'Engagement',
+          'event_label': 'Time Spent to Add 3 Different Products or Timer Expired',
+          'value': timeSpent
+        });
+
+        localStorage.clear();
+        sessionStorage.clear();
+      }
+      window.location.href = 'index.html';
+    }
+
+    window.onload = startTimer;
+
+    // Timer functionality
+    function stopTimer() {
+      let loginTime = localStorage.getItem('loginTime');
+      if (loginTime) {
+        let endTime = new Date().getTime();
+        let timeSpent = (endTime - loginTime) / 1000; // Time in seconds
+
+        // Send custom event to Google Analytics
+        gtag('event', 'time_spent', {
+          'event_category': 'Engagement',
+          'event_label': 'Time Spent to Add 3 Different Products',
+          'value': timeSpent
+        });
+
+        alert(`Time spent: ${timeSpent} seconds`);
+        localStorage.removeItem('loginTime'); // Clear the timer
+        cart.clear(); // Reset the cart
+      }
+    }
+  </script>
+  <!-- <style>
+    #timer-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+  </style> -->
 </head>
-  
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VM850QWH95"></script>
 <script>
@@ -18,15 +113,92 @@
 </script>
 
 <body>
-  <div class="login-container">
-    <h1>Login</h1>
-    <button onclick="login()">Login</button>
+  <div class="timer-container">
+    <div id="timer">Time left: 5:00</div>
   </div>
-  <script>
-    function login() {
-      localStorage.setItem('loginTime', new Date().getTime());
-      window.location.href = 'landing.html';
-    }
-  </script>
+  
+  <header>
+    <img src="images/lv_banner.png" alt="Header Image" class="header-image">
+  </header>
+  <header>
+    <h1>Luxury Handbags</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="product-list">
+      <article class="product-item">
+        <img src="images/product_images/1-louis-vuitton-(pochette-accessoires-tasche-monogram-canvas)-geldbörsen-und-kleinlederwaren--M82766_PM2_Front view-(1300 EUR).png" alt="Handbag_1">
+        <h2>Louis Vuitton Pochette</h2>
+        <p>€1300</p>
+        <button onclick="addToCart('Handbag_1')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/2-louis-vuitton-croissant-mm-monogram-canvas-handtaschen--M46828_PM2_Front view-(2500 EUR).png" alt="Handbag_2">
+        <h2>Louis Vuitton Croissant MM </h2>
+        <p>€2500</p>
+        <button onclick="addToCart('Handbag_2')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/3-louis-vuitton-neverfull-mm-monogram-canvas-handbags--M46975_PM2_Front view-(1500 EUR).webp" alt="Handbag_3">
+        <h2>Louis Vuitton Neverfull MM</h2>
+        <p>€1500</p>
+        <button onclick="addToCart('Handbag_3')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/4-louis-vuitton-carryall-pm-monogram-canvas-handbags--M46203_PM2_Front view-(2150 EUR).PNG" alt="Handbag_4">
+        <h2>Louis Vuitton Carryall PM</h2>
+        <p>€2150</p>
+        <button onclick="addToCart('Handbag_4')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/5-louis-vuitton-neverfull-mm-monogram-empreinte-leather-handbags--M58907_PM2_Front view.png" alt="Handbag_5">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_5')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/6-louis-vuitton-loop-monogram-canvas-handtaschen--M81098_PM2_Front view.png" alt="Handbag_6">
+        <h2>Louis Vuitton Loop Canvas PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_6')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/7-louis-vuitton-petite-malle-monogram-reverse-canvas-handbags--M45960_PM2_Front view.png" alt="Handbag_7">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_7')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/8-louis-vuitton--M44935_PM2_Front view-(2400 EUR).png" alt="Handbag_8">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_8')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/9-louis-vuitton-neverfull-bb-monogram-canvas-handbags--M46705_PM2_Front view.png" alt="Handbag_9">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_9')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/10-louis-vuitton-graceful-mm-monogram-canvas-handbags--M43703_PM2_Front view.PNG" alt="Handbag_10">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_10')">Add to Cart</button>
+      </article>
+
+      <!-- Add more products as needed -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Luxury Handbags</p>
+    <p>Made with &hearts; by Mansi</p>
+  </footer>
 </body>
 </html>

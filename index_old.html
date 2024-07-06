@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Luxury Handbags</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VM850QWH95"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VM850QWH95');
+</script>
+
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <button onclick="login()">Login</button>
+  </div>
+  <script>
+    function login() {
+      localStorage.setItem('loginTime', new Date().getTime());
+      window.location.href = 'landing.html';
+    }
+  </script>
+</body>
+</html>
