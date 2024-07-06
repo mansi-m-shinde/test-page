@@ -11,10 +11,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-XXXXXXXXX-X');
-    
-    // Initialize cart and product count
+    gtag('config', 'G-VM850QWH95');
+
     let cart = new Set();
+    let cartCounter = 0;
     let timerInterval;
     let timeLeft = 300; // 5 minutes in seconds
 
@@ -37,9 +37,10 @@
       }
     }
 
-    // Check  three products added
     function addToCart(button, productId) {
       cart.add(productId);
+      cartCounter++;
+      updateCartCounter();
 
       // Change button text and style
       button.textContent = 'Added to Cart';
@@ -47,9 +48,14 @@
       button.style.color = '#423723'; // Example color for the button text
       button.disabled = true; // Optionally disable the button
 
+      // Check if three products are added
       if (cart.size === 3) {
         endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
       }
+    }
+
+    function updateCartCounter() {
+      document.getElementById('cart-counter').textContent = cartCounter;
     }
 
     function endSession() {
@@ -69,28 +75,6 @@
         sessionStorage.clear();
       }
       window.location.href = 'index.html';
-    }
-
-    // window.onload = startTimer;
-
-    // Timer functionality
-    function stopTimer() {
-      let loginTime = localStorage.getItem('loginTime');
-      if (loginTime) {
-        let endTime = new Date().getTime();
-        let timeSpent = (endTime - loginTime) / 1000; // Time in seconds
-
-        // Send custom event to Google Analytics
-        gtag('event', 'time_spent', {
-          'event_category': 'Engagement',
-          'event_label': 'Time Spent to Add 3 Different Products',
-          'value': timeSpent
-        });
-
-        alert(`Time spent: ${timeSpent} seconds`);
-        localStorage.removeItem('loginTime'); // Clear the timer
-        cart.clear(); // Reset the cart
-      }
     }
 
     let currentPage = 1;
@@ -127,18 +111,6 @@
     };
   </script>
 </head>
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VM850QWH95"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VM850QWH95');
-</script>
-
 <body>
   <header>
     <img src="images/lv_banner.png" alt="Header Image" class="header-image">
@@ -155,6 +127,10 @@
     </nav>
     <div id="timer-container">
       <div id="timer">Time left: 5:00</div>
+    </div>
+    <div class="cart-icon-container">
+      <div class="cart-icon"></div>
+      <div id="cart-counter" class="cart-counter">0</div>
     </div>
   </header>
 
