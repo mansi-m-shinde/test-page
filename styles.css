@@ -1,12 +1,13 @@
+@import url(https://db.onlinewebfonts.com/c/64c0284f1ada1cf79ec484ac28eee170?family=Louis+Vuitton+Regular); 
 body {
-  font-family: Arial, sans-serif;
+  font-family:  "Louis Vuitton Regular", Garamond;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
 }
 
 .fixed-header {
-  background-color: #333;
+  background-color: #362b18;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -18,13 +19,14 @@ body {
 }
 
 .header-image-container {
-  margin-top: 170px; /* Adjust this based on the height of the fixed header */
+  margin-top: 270px; /* Adjust this based on the height of the fixed header */
 }
 
 .header-image {
   display: block;
   width: 100%;
   height: auto;
+  margin-top: 270px;
 }
 
 nav ul {
@@ -61,7 +63,7 @@ nav ul li a {
 }
 
 button {
-  background-color: #333;
+  background-color: #362b18;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -73,7 +75,7 @@ button:hover {
 }
 
 footer {
-  background-color: #333;
+  background-color: #362b18;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
@@ -86,8 +88,8 @@ footer {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  border-top: 2px solid #333;
-  border-bottom: 2px solid #333;
+  border-top: 2px solid #362b18;
+  border-bottom: 2px solid #362b18;
   position: fixed;
   top: 170px; /* Adjust this value based on the height of the header */
   left: 0;
@@ -96,7 +98,7 @@ footer {
 
 #timer {
   display: inline-block;
-  background-color: #333;
+  background-color: #362b18;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -125,6 +127,11 @@ footer {
 .content {
   margin-top: 160px; /* Adjust to avoid content being hidden behind the fixed header and timer */
   padding: 1rem;
+}
+
+button.added-to-cart {
+  background-color: #9f8453; /* New background color */
+  color: #fff; /* New text color */
 }
 
 /* Media Queries for Responsive Design */
