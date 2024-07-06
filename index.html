@@ -42,7 +42,7 @@
       cart.add(productId);
       
       if (cart.size === 3) {
-        endSession();
+        endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
       }
     }
 
@@ -65,7 +65,7 @@
       window.location.href = 'index.html';
     }
 
-    window.onload = startTimer;
+    // window.onload = startTimer;
 
     // Timer functionality
     function stopTimer() {
@@ -86,6 +86,41 @@
         cart.clear(); // Reset the cart
       }
     }
+
+    let currentPage = 1;
+    const totalPages = 2; // Update this based on your total number of pages
+
+    function changePage(direction) {
+      currentPage += direction;
+      if (currentPage < 1) currentPage = 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      updatePageDisplay();
+    }
+
+    function updatePageDisplay() {
+      for (let i = 1; i <= totalPages; i++) {
+        const pageElement = document.getElementById(`productList${i}`);
+        if (i === currentPage) {
+          pageElement.classList.add('active');
+        } else {
+          pageElement.classList.remove('active');
+        }
+      }
+
+      document.getElementById('prevPage').disabled = currentPage === 1;
+      document.getElementById('nextPage').disabled = currentPage === totalPages;
+      document.getElementById('prevPageBottom').disabled = currentPage === 1;
+      document.getElementById('nextPageBottom').disabled = currentPage === totalPages;
+    }
+
+    // Initialize page display
+    window.onload = function() {
+      startTimer();
+      updatePageDisplay();
+    };
+
+    
   </script>
   <style>
     #timer-container {
@@ -106,6 +141,23 @@
       padding: 10px 20px;
       border-radius: 5px;
     }
+    .page-navigation {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .page-navigation button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .product-list {
+      display: none;
+    }
+    .product-list.active {
+      display: block;
+    }
   </style>
 </head>
 
@@ -121,10 +173,6 @@
 </script>
 
 <body>
-  <div id="timer-container">
-    <div id="timer">Time left: 5:00</div>
-  </div>
-  
   <header>
     <img src="images/lv_banner.png" alt="Header Image" class="header-image">
   </header>
@@ -133,13 +181,18 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
+
+  <div id="timer-container">
+    <div id="timer">Time left: 5:00</div>
+  </div>
+
   <main>
-    <section class="product-list">
+    <section id="productList1" class="product-list active">
+    <!-- <section class="product-list"> -->
       <article class="product-item">
         <img src="images/product_images/1-louis-vuitton-(pochette-accessoires-tasche-monogram-canvas)-geldbörsen-und-kleinlederwaren--M82766_PM2_Front view-(1300 EUR).png" alt="Handbag_1">
         <h2>Louis Vuitton Pochette</h2>
@@ -203,10 +256,140 @@
 
       <!-- Add more products as needed -->
     </section>
+
+    <section id="productList2" class="product-list">
+      <article class="product-item">
+        <img src="images/product_images/21-louis-vuitton--M82952_PM2_Front view.png" alt="Handbag_21">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_21')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/22-louis-vuitton-mini-boîte-chapeau-monogram-canvas-geldbörsen-und-kleinlederwaren--M44699_PM2_Front view-(1900 EUR)-png.webp" alt="Handbag_22">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_22')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/23-louis-vuitton-onthego-mm-monogram-canvas-handbags--M45321_PM2_Front view.png" alt="Handbag_23">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_23')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/24-louis-vuitton-boulogne-monogram-canvas-handtaschen--M45832_PM2_Front view.png" alt="Handbag_24">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_24')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/25-louis-vuitton--M44875_PM2_Front view.png" alt="Handbag_25">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_25')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/26-louis-vuitton-atlantis-gm-monogram-canvas-handbags--M46817_PM1_Back view.png" alt="Handbag_26">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_26')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/27-louis-vuitton-diane-monogram-canvas-handtaschen--M46049_PM2_Front view.png" alt="Handbag_27">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_27')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/28-louis-vuitton--M46999_PM2_Front view.png" alt="Handbag_28">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_28')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/29-louis-vuitton-side-trunk-mm-monogram-canvas-handbags--M46358_PM2_Front view.png" alt="Handbag_29">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_29')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/30-louis-vuitton-alma-pm-monogram-canvas-handbags--M53151_PM2_Front view.png" alt="Handbag_30">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_30')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/31- louis-vuitton--M46740_PM2_Front view - 2000 EUR.avif" alt="Handbag_31">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_31')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/32- louis-vuitton-speedy-25-monogram-canvas-handbags--M41109_PM2_Front view.webp" alt="Handbag_32">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_32')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/33- louis-vuitton--M12859_PM2_Front view.avif" alt="Handbag_33">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_33')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/34-louis-vuitton-dauphine-mm-autres-toiles-monogram-handtaschen--M45958_PM2_Front view-2800 EUR.webp" alt="Handbag_34">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_34')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/35-louis-vuitton--M82465_PM2_Front view- 2700 EUR.avif" alt="Handbag_35">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_35')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/36- louis-vuitton--M46311_PM2_Front view.avif" alt="Handbag_36">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_36')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/37- louis-vuitton-alma-pm-damier-ebene-canvas-handbags--N53151_PM2_Front view.webp" alt="Handbag_37">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_37')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/38-louis-vuitton--M45165_PM2_Front view- 2350 EUR.avif" alt="Handbag_38">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_38')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/39- louis-vuitton--M46372_PM2_Front view.avif" alt="Handbag_39">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_39')">Add to Cart</button>
+      </article>
+      <article class="product-item">
+        <img src="images/product_images/40-louis-vuitton-petit-palais--M45900_PM2_Front view.webp" alt="Handbag_40">
+        <h2>Louis Vuitton Loop PM</h2>
+        <p>€xxxx</p>
+        <button onclick="addToCart('Handbag_40')">Add to Cart</button>
+      </article>
+
+    </section>
+    <div class="page-navigation">
+      <button id="prevPageBottom" onclick="changePage(-1)">Previous Page</button>
+      <button id="nextPageBottom" onclick="changePage(1)">Next Page</button>
+    </div>
   </main>
   <footer>
     <p>&copy; 2024 Luxury Handbags</p>
     <p>Made with &hearts; by Mansi</p>
   </footer>
+
+
 </body>
 </html>
