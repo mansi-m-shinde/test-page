@@ -89,7 +89,7 @@ footer {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   position: fixed;
-  top: 150px; /* Adjust this value based on the height of the header */
+  top: 170px; /* Adjust this value based on the height of the header */
   left: 0;
   z-index: 1000;
 }
@@ -125,4 +125,22 @@ footer {
 .content {
   margin-top: 160px; /* Adjust to avoid content being hidden behind the fixed header and timer */
   padding: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .product-item {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-item {
+    width: calc(100% - 2rem);
+  }
+
+  #timer-container {
+    font-size: 18px;
+    padding: 10px 0;
+  }
 }
