@@ -75,7 +75,12 @@ footer {
   padding: 1rem 0;
   text-align: center;
 }
-
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .login-container {
   display: flex;
   flex-direction: column;
@@ -104,6 +109,7 @@ footer {
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
   margin-bottom: 20px;
+  position: fixed;
 }
 #timer {
   display: inline-block;
@@ -128,4 +134,9 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   padding: 2rem;
+}
+.content {
+  margin-top: 60px; /* Adjust to avoid content being hidden behind the fixed header */
+  /* margin-left: 220x; Adjust to avoid content being hidden behind the fixed sidebar */
+  padding: 1rem;
 }
