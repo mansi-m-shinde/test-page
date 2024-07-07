@@ -29,7 +29,7 @@
       document.getElementById('timer').textContent = `Time left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
       
       if (timeLeft <= 0) {
-        alert(`TIME OVER!! Please start again.`);
+        alert('TIME OVER!! Please start again.');
         clearInterval(timerInterval);
         endSession();
       } else {
@@ -50,7 +50,37 @@
 
       // Check if three products are added
       if (cart.size === 3) {
-        endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
+        // endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
+        alert('Thank You for shopping at Luxury Handbags! Please fill the survey to help out my Thesis :)')
+        redirectToSurvey()
+      }
+    }
+
+    // Function to redirect to Google Forms with the time spent
+    function redirectToSurvey() {
+
+      clearInterval(timerInterval);
+      let loginTime = localStorage.getItem('loginTime');
+      if (loginTime) {
+        let endTime = new Date().getTime();
+        let timeSpent = (endTime - loginTime) / 1000; // Time in seconds
+
+        gtag('event', 'time_spent', {
+          'event_category': 'Engagement',
+          'event_label': 'Time Spent to Add 3 Different Products or Timer Expired',
+          'value': timeSpent
+        });
+        
+        // const timeSpent = getTimeSpent();
+        const surveyUrl = "https://docs.google.com/forms/d/e/your-google-form-id/viewform"; //Replace with form link
+        // Maybe also include products purchased (by ID) > send the cart variable maybe
+        const prefilledSurveyUrl = `${surveyUrl}?entry.1234567890=${timeSpent}`; // Replace entry.1234567890 with your form's entry field ID
+        // window.location.href = prefilledSurveyUrl;
+        // alert('Redirecting to Survey. Time Spent: ' + timeSpent)
+        window.location.href = 'survey.html?timeSpent=' + encodeURIComponent(timeSpent);
+
+        localStorage.clear();
+        sessionStorage.clear();
       }
     }
 
