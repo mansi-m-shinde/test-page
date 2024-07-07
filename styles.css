@@ -195,13 +195,13 @@ button.added-to-cart {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .product-item {
-    width: calc(50% - 2rem);
+    width: calc(25% - 2rem); /* Four products per row on Tablets */
   }
 }
 
 @media (max-width: 480px) {
   .product-item {
-    width: calc(100% - 2rem);
+    width: calc(50% - 2rem); /* Two products per row on mobile phones */
   }
 
   #timer-container {
