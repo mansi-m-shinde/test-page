@@ -206,21 +206,29 @@ button.added-to-cart {
   .product-item {
     width: calc(33.33% - 2rem); /* 3 items per row on medium screens */
   }
+
+  h2 {
+    font-size: 1.8rem; /* Adjusted font size for medium screens */
+  }
 }
 
 @media (max-width: 768px) {
   .product-item {
-    width: calc(25% - 2rem); /* Four products per row on Tablets */
+    width: calc(50% - 2rem); /* Two products per row on Tablets */
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjusted font size for tablets */
+  }
+
+  .product-item p {
+    font-size: 0.9rem; /* Adjusted font size for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .product-item {
-    width: calc(50% - 2rem); /* Two products per row on mobile phones */
+    width: calc(50% - 1rem); /* Two products per row on mobile phones */
   }
 
   .product-item img {
@@ -236,7 +244,7 @@ button.added-to-cart {
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Adjusted font size for mobile screens */
   }
 
   #timer-container {
