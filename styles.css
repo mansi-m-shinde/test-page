@@ -73,6 +73,10 @@ nav ul li a {
   font-size: 1rem;
 }
 
+h2 {
+  font-size: 2rem;
+}
+
 button {
   background-color: #362b18;
   border: none;
@@ -208,6 +212,10 @@ button.added-to-cart {
   .product-item {
     width: calc(25% - 2rem); /* Four products per row on Tablets */
   }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -225,6 +233,10 @@ button.added-to-cart {
 
   button {
     font-size: 0.8rem; /* Smaller button text for mobile screens */
+  }
+
+  h2 {
+    font-size: 1.2rem;
   }
 
   #timer-container {
