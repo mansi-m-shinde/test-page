@@ -70,7 +70,9 @@ nav ul li a {
 }
 
 .product-item img {
-  max-width: 100%;
+  width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
 }
 
 button {
@@ -83,6 +85,10 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+button.remove-from-cart {
+  background-color: #6e3836; /* Red background for the remove button */
 }
 
 footer {
@@ -193,6 +199,12 @@ button.added-to-cart {
 }
 
 /* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .product-item {
+    width: calc(33.33% - 2rem); /* 3 items per row on medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .product-item {
     width: calc(25% - 2rem); /* Four products per row on Tablets */
