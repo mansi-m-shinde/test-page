@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Handbags</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        function getQueryParam(name) {
+          var urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+        }
+        function prefillSurvey() {
+            var timeSpent = getQueryParam('timeSpent');
+            if (timeSpent) {
+                // Change the corresponding entry code in the actual form (entry.1777040360=)
+                var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent);
+                document.getElementById('surveyIframe').src = formUrl;
+            }
+        }
+    </script>    
+</head>
+
+<body onload="prefillSurvey()">
+    <header>
+      <img src="images/lv_banner.png" alt="Header Image" class="header-image-survey">
+    </header>
+    <header class="fixed-header">
+      <h1>Luxury Handbags</h1>
+      <!-- Update the version when pushing to check if the webpage has updated too -->
+      <!-- <h3>Version 1.03</h3>  -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div id="survey-container">
+        <div id="survey-title">Thesis Survey</div>
+      </div>
+    </header>
+
+    <main>
+        <section id="survey">
+            <p class="centered-text">Please fill out the form below:</p>
+            <div class="form-container">
+                <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1TqLz5DpnL22yvUWpsO58bAsvCy9q-2EsDFG5ywAd6zey4w/viewform?embedded=trueusp=pp_url&entry.1777040360=50mins" width="640" height="634" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+                <iframe id="surveyIframe" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Luxury Handbags</p>
+      <p>Made with &hearts; by Mansi</p>
+      <p>No images are owned by the creator of this website and are only used for research purposes.</p>
+    </footer>
+</body>
+</html>
