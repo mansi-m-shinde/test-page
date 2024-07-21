@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Redirect</title>
+  <title>Thesis Website: Instructions Page</title>
+  <link rel="stylesheet" href="styles.css">
   <script>
-    window.onload = function() {
+    function redirectUser() {
       // Generate a random number between 0 and 1
       const randomNum = Math.random();
 
@@ -19,10 +20,30 @@
       } else {
         window.location.href = url2;
       }
-    };
+    }
   </script>
 </head>
 <body>
-  <p>If you see this text, JavaScript is not working or you have been redirected already.</p>
+  <header class="fixed-header">
+    <h1>LUXURY HANDBAGS</h1>
+    <div id="contact-container">
+      <div id="contact-title">Instructions</div>
+    </div>
+  </header>
+
+  <div class="instructions-box">
+    <p>Please read the following instructions carefully before proceeding:</p>
+    <ol>
+      <li>This is a demo website only meant to help with my Master's Thesis</li>
+      <li>Instruction 2</li>
+      <li>Instruction 3</li>
+    </ol>
+    <button onclick="redirectUser()">OK</button>
+  </div>
+  <footer>
+    <p>&copy; 2024 LUXURY HANDBAGS</p>
+    <p>Made with &hearts; by Mansi</p>
+    <p>No images are owned by the creator of this website and are only used for research purposes. Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> is licensed by CC BY 4.0</p>
+  </footer>
 </body>
 </html>
