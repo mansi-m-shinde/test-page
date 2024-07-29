@@ -67,7 +67,7 @@ nav ul li a {
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center;
-  width: calc(20% - 1rem);
+  width: calc(25% - 1rem);
   box-sizing: border-box;
 }
 
@@ -352,7 +352,7 @@ button.added-to-cart {
 
 @media (min-width: 2160px) {
   .product-item {
-    width: calc(20% - 2rem); /* 5 items per row on very large screens */
+    width: calc(25% - 2rem); /* 5 items per row on very large screens */
   }
 
   h2 {
@@ -392,7 +392,7 @@ button.added-to-cart {
 
 @media (min-width: 1440px) {
   .product-item {
-    width: calc(20% - 2rem); /* 5 items per row on very large screens */
+    width: calc(25% - 2rem); /* 5 items per row on very large screens */
   }
 
   h2 {
