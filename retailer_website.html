@@ -59,7 +59,7 @@
       // Check if three products are added
         if (cart.size === 3) {
           // endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
-          alert('Thank You for shopping at LUXURY HANDBAGS! Please fill the survey to help out my Thesis :) Cart Items: ' + Array.from(cart))
+          alert('Thank You for shopping! Please click on the "Ok" button to fill out the survey :) Cart Items: ' + Array.from(cart))
           redirectToSurvey()
         }
       }
@@ -124,6 +124,12 @@
         
         // const timeSpent = getTimeSpent(); 
         // const timeSpent = getTimeSpent(); 
+        // const timeSpent = getTimeSpent(); 
+        // <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true" width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        // const timeSpent = getTimeSpent();
+        // <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true" width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        // const timeSpent = getTimeSpent();
+        // const timeSpent = getTimeSpent(); 
         // <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true" width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         // const timeSpent = getTimeSpent();
         // <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true" width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -163,7 +169,7 @@
     }
 
     let currentPage = 1;
-    const totalPages = 2; // Update this based on your total number of pages
+    const totalPages = 5; // Update this based on your total number of pages
 
     function changePage(direction) {
       currentPage += direction;
@@ -198,7 +204,7 @@
 </head>
 <body>
   <header>
-    <img src="images/LV Website Banner.jpg" alt="Header Image" class="header-image">
+    <img src="img-HkAtz8NUbpC5B7ZP8GACR.jpg" alt="Header Image" class="header-image">
   </header>
   <header class="fixed-header">
     <h1>LUXURY HANDBAGS Retailer</h1>
@@ -223,7 +229,7 @@
     <section id="productList1" class="product-list active">
 
       <article class="product-item"  data-product-id="Handbag_1">
-        <img src="images/product_images/brand/1-louis-vuitton-(pochette-accessoires-tasche-monogram-canvas)-geldbörsen-und-kleinlederwaren--M82766_PM2_Front view-(1300 EUR).png" alt="Handbag_1">
+        <img src="images/product_images/retailer/images/product_images/brand/1-louis-vuitton-(pochette-accessoires-tasche-monogram-canvas)-geldbörsen-und-kleinlederwaren--M82766_PM2_Front view-(1300 EUR).png" alt="Handbag_1">
         <h3>LOUIS VUITTON</h3>
         <h3>Pochette</h3>
         <p>€ 1300</p>
@@ -233,7 +239,7 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_1">
-        <img src="images/product_images/brand/2-louis-vuitton-croissant-mm-monogram-canvas-handtaschen--M46828_PM2_Front view-(2500 EUR).png" alt="Handbag_2">
+        <img src="images/product_images/retailer/images/product_images/brand/2-louis-vuitton-croissant-mm-monogram-canvas-handtaschen--M46828_PM2_Front view-(2500 EUR).png" alt="Handbag_2">
         <h3>LOUIS VUITTON</h3>
         <h3>Croissant MM</h3>
         <p>€ 2500</p>
@@ -256,181 +262,181 @@
     <!-- <section class="product-list"> -->
 
       <article class="product-item"  data-product-id="Handbag_1">
-        <img src="images/product_images/brand/1-louis-vuitton-(pochette-accessoires-tasche-monogram-canvas)-geldbörsen-und-kleinlederwaren--M82766_PM2_Front view-(1300 EUR).png" alt="Handbag_1" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Pochette</h3>
-        <p>€ 1300</p>
+        <img src="images/product_images/retailer/658574_18YSG_9068_001_077_0067_Light-Gucci-Horsebit1955-Mini-Tasche.png" alt="Handbag_1" onclick="enlargeImage(this)">
+        <h3>GUCCI</h3>
+        <h3>Horsebit 1955 Mini Bag</h3>
+        <p>€ 2980</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button> <!-- can remove 'Handbag_1' here and onstead use 'const productId = button.getAttribute('data-product-id');' in the script -->
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button> <!-- can remove 'Handbag_1' here and onstead use 'const productId = button.getAttribute('data-product-id');' in the script -->
       </article>
 
       <article class="product-item"  data-product-id="Handbag_2">
-        <img src="images/product_images/brand/2-louis-vuitton-croissant-mm-monogram-canvas-handtaschen--M46828_PM2_Front view-(2500 EUR).png" alt="Handbag_2" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Croissant MM</h3>
-        <p>€ 2500</p>
+        <img src="images/product_images/retailer/742360_1IV0G_1000_001_075_0000_Light-Kleine-GucciBlondie-Schultertasche.png" alt="Handbag_2" onclick="enlargeImage(this)">
+        <h3>GUCCI</h3>
+        <h3>Small Blondie Shoulder</h3>
+        <p>€ 1390</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_3">
-        <img src="images/product_images/brand/3-louis-vuitton-neverfull-mm-monogram-canvas-handbags--M46975_PM2_Front view-(1500 EUR).webp" alt="Handbag_3" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Neverfull MM</h3>
-        <p>€ 1500</p>
+        <img src="images/product_images/retailer/810229_AAD5V_2542_001_085_0000_Light-Mittelgroe-GucciJackie1961-Schultertasche.png" alt="Handbag_3" onclick="enlargeImage(this)">
+        <h3>GUCCI</h3>
+        <h3>Jackie 1961</h3>
+        <p>€ 3400</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_4">
-        <img src="images/product_images/brand/4-louis-vuitton-carryall-pm-monogram-canvas-handbags--M46203_PM2_Front view-(2150 EUR).PNG" alt="Handbag_4" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Carryall PM</h3>
-        <p>€ 2150</p>
+        <img src="images/product_images/retailer/ALAIA- 45865131go_999_f.PNG" alt="Handbag_4" onclick="enlargeImage(this)">
+        <h3>ALAIA</h3>
+        <h3>Neo Mina 20</h3>
+        <p>€ 1750</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_5">
-        <img src="images/product_images/brand/5-louis-vuitton-neverfull-mm-monogram-empreinte-leather-handbags--M58907_PM2_Front view.png" alt="Handbag_5" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Neverfull MM</h3>
+        <img src="images/product_images/retailer/ALAIA- 45876986ri_999_f.png" alt="Handbag_5" onclick="enlargeImage(this)">
+        <h3>ALAIA</h3>
+        <h3>One Piece Demi-Lune</h3>
         <p>€ 2200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_6">
-        <img src="images/product_images/brand/6-louis-vuitton-loop-monogram-canvas-handtaschen--M81098_PM2_Front view.png" alt="Handbag_6" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Loop Monogram Canvas</h3>
-        <p>€ 1950</p>
+        <img src="images/product_images/retailer/ALAIA- 45876991nn_999_f.png" alt="Handbag_6" onclick="enlargeImage(this)">
+        <h3>ALAIA</h3>
+        <h3>Tote Bobine</h3>
+        <p>€ 3200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_7">
-        <img src="images/product_images/brand/7-louis-vuitton-petite-malle-monogram-reverse-canvas-handbags--M45960_PM2_Front view.png" alt="Handbag_7" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Petite Malle Monogram</h3>
-        <p>€ 5000</p>
+        <img src="images/product_images/retailer/alex mcq- Large-6762561X3EC1000_R.png" alt="Handbag_7" onclick="enlargeImage(this)">
+        <h3>ALEXANDER MCQUEEN</h3>
+        <h3>Knuckle Clutch</h3>
+        <p>€ 3690</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_8">
-        <img src="images/product_images/brand/8-louis-vuitton--M44935_PM2_Front view-(2400 EUR).png" alt="Handbag_8" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Nice  BB Monogram</h3>
-        <p>€ 2400</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_9">
-        <img src="images/product_images/brand/9-louis-vuitton-neverfull-bb-monogram-canvas-handbags--M46705_PM2_Front view.png" alt="Handbag_9" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Neverfull BB</h3>
-        <p>€ 1800</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_10">
-        <img src="images/product_images/brand/10-louis-vuitton-graceful-mm-monogram-canvas-handbags--M43703_PM2_Front view.PNG" alt="Handbag_10" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Graceful MM Monogram</h3>
-        <p>€ xxxx</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_11">
-        <img src="images/product_images/brand/11-louis-vuitton--M45833_PM2_Front view-(2700 eur).PNG" alt="Handbag_11" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Grand Palais</h3>
-        <p>€ 2700</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_12">
-        <img src="images/product_images/brand/12-louis-vuitton--M22735_PM2_Front view-(2500 EUR)-PNG.png" alt="Handbag_12" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Oxford Lockme</h3>
+        <img src="images/product_images/retailer/alex mcq- Large-7430911MCAA1000_F.png" alt="Handbag_8" onclick="enlargeImage(this)">
+        <h3>ALEXANDER MCQUEEN</h3>
+        <h3>The Peak Bag - Small</h3>
         <p>€ 2500</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
+      <article class="product-item"  data-product-id="Handbag_9">
+        <img src="images/product_images/retailer/alex mcq- Large-7565211BLIX1460_F.png" alt="Handbag_9" onclick="enlargeImage(this)">
+        <h3>ALEXANDER MCQUEEN</h3>
+        <h3>Satchel in Grey</h3>
+        <p>€ 1890</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_10">
+        <img src="images/product_images/retailer/alex mcq- Large-8066481VDAN8490_F.PNG" alt="Handbag_10" onclick="enlargeImage(this)">
+        <h3>ALEXANDER MCQUEEN</h3>
+        <h3>Cross-bar Bag Multicolour</h3>
+        <p>€ 3200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_11">
+        <img src="images/product_images/retailer/alex mcq- Large-8085211VDBF6408_F.PNG" alt="Handbag_11" onclick="enlargeImage(this)">
+        <h3>ALEXANDER MCQUEEN</h3>
+        <h3>Sling Bag Cranberry</h3>
+        <p>€ 1900</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_12">
+        <img src="images/product_images/retailer/ALIA-45842809jr_999_f.png" alt="Handbag_12" onclick="enlargeImage(this)">
+        <h3>ALAIA</h3>
+        <h3>T-lock top handle</h3>
+        <p>€ 1190</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
       <article class="product-item"  data-product-id="Handbag_13">
-        <img src="images/product_images/brand/13-LOUIS-VUITTON_Cluny-BB-Tote-Bag_Monogram-Canvas_Bordeaux-Fuchsia_2017_FRONT_530x@2x.PNG" alt="Handbag_13" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Cluny BB Tote</h3>
-        <p>€ 2150</p>
+        <img src="images/product_images/retailer/ALIA-45876990qu_999_f.PNG" alt="Handbag_13" onclick="enlargeImage(this)">
+        <h3>ALAIA</h3>
+        <h3>Le Demi-Coeur</h3>
+        <p>€ 1750</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_14">
-        <img src="images/product_images/brand/14-louis-vuitton-felicie-pochette--M81896_PM2_Front view.PNG" alt="Handbag_14" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Felicie Pochette</h3>
-        <p>€ 1200</p>
+        <img src="images/product_images/retailer/apc- pxblj-f61392lzz_02_1625840886.png" alt="Handbag_14" onclick="enlargeImage(this)">
+        <h3>A.P.C</h3>
+        <h3>Demi-Lune Mini Pocket</h3>
+        <p>€ 410</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_15">
-        <img src="images/product_images/brand/15-louis-vuitton-noé-bb-monogram-canvas-handtaschen--M46983_PM2_Front view.PNG" alt="Handbag_15" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Noé BB Monogram</h3>
-        <p>€ 1600</p>
+        <img src="images/product_images/retailer/apc- pxbmw-f61413lzz_02_1623399561.PNG" alt="Handbag_15" onclick="enlargeImage(this)">
+        <h3>A.P.C</h3>
+        <h3>Grace Small Pocket</h3>
+        <p>€ 680</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_16">
-        <img src="images/product_images/brand/16-louis-vuitton-wallet-on-chain-ivy-monogram-canvas-handtaschen--M81911_PM2_Front view.PNG" alt="Handbag_16" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Ivy Wallet on chain Monogram</h3>
-        <p>€ 1490</p>
+        <img src="images/product_images/retailer/apc- pxbru-f61869faa_02_1716459676.PNG" alt="Handbag_16" onclick="enlargeImage(this)">
+        <h3>A.P.C</h3>
+        <h3>Virginie Small</h3>
+        <p>€ 530</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_17">
-        <img src="images/product_images/brand/17-louis-vuitton-coussin-pm-h32-handbags--M21260_PM2_Front view.PNG" alt="Handbag_17" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Coussin PM</h3>
-        <p>€ 3800</p>
+        <img src="images/product_images/retailer/apc- pxbru-f61924kaw_02_1719306636.PNG" alt="Handbag_17" onclick="enlargeImage(this)">
+        <h3>A.P.C</h3>
+        <h3>Virginie Flap</h3>
+        <p>€ 490</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_18">
-        <img src="images/product_images/brand/18-louis-vuitton-lock-go-lockme-leather-handbags--M22311_PM2_Front view.PNG" alt="Handbag_18" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Lock & Go</h3>
-        <p>€ 2700</p>
+        <img src="images/product_images/retailer/balenciaga- Large-6560501S4CY8110_F.PNG" alt="Handbag_18" onclick="enlargeImage(this)">
+        <h3>BALENCIAGA</h3>
+        <h3>Hourglass Wallet on Chain</h3>
+        <p>€ 1390</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_19">
-        <img src="images/product_images/brand/19-louis-vuitton--M81085_PM2_Front view.(1500 EUR).png" alt="Handbag_19" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Nano Speedy</h3>
-        <p>€ 1550</p>
+        <img src="images/product_images/retailer/balenciaga- Large-7977892AA9S3210_F.png" alt="Handbag_19" onclick="enlargeImage(this)">
+        <h3>BALENCIAGA</h3>
+        <h3>Le City Small Bag</h3>
+        <p>€ 1890</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_20">
-        <img src="images/product_images/brand/20-louis-vuitton--M82335_PM2_Front view-(1600 EUR).png" alt="Handbag_20" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Mini Bumbag</h3>
-        <p>€ 1600</p>
+        <img src="images/product_images/retailer/Balenciaga- Large-8054812ABAV1000_F.png" alt="Handbag_20" onclick="enlargeImage(this)">
+        <h3>BALENCIAGA</h3>
+        <h3>Bel Air Medium Carry All</h3>
+        <p>€ 4500</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -441,186 +447,740 @@
     <section id="productList2" class="product-list">
 
       <article class="product-item"  data-product-id="Handbag_21">
-        <img src="images/product_images/brand/21-louis-vuitton--M82952_PM2_Front view.png" alt="Handbag_21" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Nano Cannes</h3>
-        <p>€ 2100</p>
+        <img src="images/product_images/retailer/Balenciaga- Large-671309210BK1000_F.png" alt="Handbag_21" onclick="enlargeImage(this)">
+        <h3>BALENCIAGA</h3>
+        <h3>Le Cagole XS Shoulder Bag with Rhinestones</h3>
+        <p>€ 2550</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_22">
-        <img src="images/product_images/brand/22-louis-vuitton-mini-boîte-chapeau-monogram-canvas-geldbörsen-und-kleinlederwaren--M44699_PM2_Front view-(1900 EUR)-png.webp" alt="Handbag_22" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Mini Boîte Chapeau </h3>
-        <p>€ 1950</p>
+        <img src="images/product_images/retailer/celine- 117022FWB.04LU_1_SS24_P2_W.png" alt="Handbag_22" onclick="enlargeImage(this)">
+        <h3>CELINE</h3>
+        <h3>Triomphe Raffia Small</h3>
+        <p>€ 1200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_23">
-        <img src="images/product_images/brand/23-louis-vuitton-onthego-mm-monogram-canvas-handbags--M45321_PM2_Front view.png" alt="Handbag_23" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>On The Go</h3>
-        <p>€ 1950</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_24">
-        <img src="images/product_images/brand/24-louis-vuitton-boulogne-monogram-canvas-handtaschen--M45832_PM2_Front view.png" alt="Handbag_24" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Boulogne</h3>
-        <p>€ 2100</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_25">
-        <img src="images/product_images/brand/25-louis-vuitton--M44875_PM2_Front view.png" alt="Handbag_25" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Metis Pouchette</h3>
-        <p>€ 2200</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_26">
-        <img src="images/product_images/brand/26-louis-vuitton-atlantis-gm-monogram-canvas-handbags--M46817_PM1_Back view.png" alt="Handbag_26" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Atlantis GM Monogram</h3>
-        <p>€ 2600</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_27">
-        <img src="images/product_images/brand/27-louis-vuitton-diane-monogram-canvas-handtaschen--M46049_PM2_Front view.png" alt="Handbag_27" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Diane Monogram</h3>
-        <p>€ 2000</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_28">
-        <img src="images/product_images/brand/28-louis-vuitton--M46999_PM2_Front view.png" alt="Handbag_28" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Vivacité</h3>
-        <p>€ xxxx</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_29">
-        <img src="images/product_images/brand/29-louis-vuitton-side-trunk-mm-monogram-canvas-handbags--M46358_PM2_Front view.png" alt="Handbag_29" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Side Trunk MM Monogram</h3>
-        <p>€ 3200</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_30">
-        <img src="images/product_images/brand/30-louis-vuitton-alma-pm-monogram-canvas-handbags--M53151_PM2_Front view.png" alt="Handbag_30" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Alma PM Monogram</h3>
-        <p>€ 1650</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_31">
-        <img src="images/product_images/brand/31- louis-vuitton--M46740_PM2_Front view - 2000 EUR.png" alt="Handbag_31" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Saumur BB</h3>
-        <p>€ xxxx</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_32">
-        <img src="images/product_images/brand/32- louis-vuitton-speedy-25-monogram-canvas-handbags--M41109_PM2_Front view.webp" alt="Handbag_32" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Speedy 25 Monogram </h3>
-        <p>€ 1550</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_33">
-        <img src="images/product_images/brand/33- louis-vuitton--M12859_PM2_Front view.png" alt="Handbag_33" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Pouchette Tirette</h3>
-        <p>€ 1600</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_34">
-        <img src="images/product_images/brand/34-louis-vuitton-dauphine-mm-autres-toiles-monogram-handtaschen--M45958_PM2_Front view-2800 EUR.png" alt="Handbag_34" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Dauphine MM Monogram</h3>
-        <p>€ 3100</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_35">
-        <img src="images/product_images/brand/35-louis-vuitton--M82465_PM2_Front view- 2700 EUR.png" alt="Handbag_35" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Camera Box Autres Toiles</h3>
-        <p>€ 2700</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_36">
-        <img src="images/product_images/brand/36- louis-vuitton--M46311_PM2_Front view.png" alt="Handbag_36" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Loop Hobo Monogram Canvas</h3>
-        <p>€ 1900</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_37">
-        <img src="images/product_images/brand/37- louis-vuitton-alma-pm-damier-ebene-canvas-handbags--N53151_PM2_Front view.webp" alt="Handbag_37" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Alma PM Damier Ebene Canvas</h3>
-        <p>€ 1650</p>
-        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
-        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
-      </article>
-
-      <article class="product-item"  data-product-id="Handbag_38">
-        <img src="images/product_images/brand/38-louis-vuitton--M45165_PM2_Front view- 2350 EUR.png" alt="Handbag_38" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Vanity PM</h3>
+        <img src="images/product_images/retailer/celine- 117253FLH.04LU_1_FW24_P1_W.png" alt="Handbag_23" onclick="enlargeImage(this)">
+        <h3>CELINE</h3>
+        <h3>Cuir Triomphe</h3>
         <p>€ 2400</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
-      <article class="product-item"  data-product-id="Handbag_39">
-        <img src="images/product_images/brand/39- louis-vuitton--M46372_PM2_Front view.png" alt="Handbag_39" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Cluny Mini Monogram Canvas</h3>
+      <article class="product-item"  data-product-id="Handbag_24">
+        <img src="images/product_images/retailer/celine- 118113FXK.38NO_1_FW24_P1_W.png" alt="Handbag_24" onclick="enlargeImage(this)">
+        <h3>CELINE</h3>
+        <h3>Teen Nino</h3>
+        <p>€ 2600</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_25">
+        <img src="images/product_images/retailer/celine- 187363BF4.31AN_1_SS24_P1_W_V2.png" alt="Handbag_25" onclick="enlargeImage(this)">
+        <h3>CELINE</h3>
+        <h3>Classic Triomphe Scheb</h3>
+        <p>€ 3500</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_26">
+        <img src="images/product_images/retailer/chloe 2- w1536.png" alt="Handbag_26" onclick="enlargeImage(this)">
+        <h3>CHLOE</h3>
+        <h3>Woody Tote</h3>
+        <p>€ 990</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_27">
+        <img src="images/product_images/retailer/cq5dam.web.hebebed.2000.2000.1.png" alt="Handbag_27" onclick="enlargeImage(this)">
+        <h3>PRADA</h3>
+        <h3>Crochet Tote BBag</h3>
+        <p>€ 1650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_28">
+        <img src="images/product_images/retailer/cq5dam.web.hebebed.2000.2000.2.png" alt="Handbag_28" onclick="enlargeImage(this)">
+        <h3>PRADA</h3>
+        <h3>Large Linen Tote Bag</h3>
+        <p>€ 2100</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_29">
+        <img src="images/product_images/retailer/cq5dam.web.hebebed.2000.2000.3.png" alt="Handbag_29" onclick="enlargeImage(this)">
+        <h3>PRADA</h3>
+        <h3>Cleo Shoulder Bag</h3>
+        <p>€ 2500</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_30">
+        <img src="images/product_images/retailer/cq5dam.web.hebebed.2000.2000.4.png" alt="Handbag_30" onclick="enlargeImage(this)">
+        <h3>PRADA</h3>
+        <h3>Medium Leather Handbag</h3>
+        <p>€ 2400</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_31">
+        <img src="images/product_images/retailer/cq5dam.web.hebebed.2000.2000.png" alt="Handbag_31" onclick="enlargeImage(this)">
+        <h3>PRADA</h3>
+        <h3>Arque Shoulder Bag</h3>
+        <p>€ 2200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_32">
+        <img src="images/product_images/retailer/Givenchy- High_Resolution_JPG-BB50ULB1UC105-03-01.png" alt="Handbag_32" onclick="enlargeImage(this)">
+        <h3>GIVENCHY</h3>
+        <h3>Voyou Basket Bag</h3>
+        <p>€ 550</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_33">
+        <img src="images/product_images/retailer/givenchy- High_Resolution_jpg-BB50Y4B1KR001-03-01.png" alt="Handbag_33" onclick="enlargeImage(this)">
+        <h3>GIVENCHY</h3>
+        <h3>Voyou Chain Bag</h3>
+        <p>€ 2300</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_34">
+        <img src="images/product_images/retailer/Givenchy- High_Resolution_jpg-BB50ZUB1ZA621-03-01.png" alt="Handbag_34" onclick="enlargeImage(this)">
+        <h3>GIVENCHY</h3>
+        <h3>Nano Antigona Cube Bag</h3>
+        <p>€ 1650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_35">
+        <img src="images/product_images/retailer/givenchy- High_Resolution_jpg-BB50ZVB1SQ457-03-01.png" alt="Handbag_35" onclick="enlargeImage(this)">
+        <h3>GIVENCHY</h3>
+        <h3>Medium G-Tote Bag in Raffia</h3>
+        <p>€ 890</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_36">
+        <img src="images/product_images/retailer/givenchy- High_Resolution_jpg-BB05117014001-03-01.png" alt="Handbag_36" onclick="enlargeImage(this)">
+        <h3>GIVENCHY</h3>
+        <h3>Small Antigona Bag</h3>
         <p>€ 1950</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
+      <article class="product-item"  data-product-id="Handbag_37">
+        <img src="images/product_images/retailer/GUCCI-443497_AABZC_1712_001_063_0008_Light-GG-Marmont-small-shoulder-bag.PNG" alt="Handbag_37" onclick="enlargeImage(this)">
+        <h3>GUCCI</h3>
+        <h3>GG Mormont</h3>
+        <p>€ 2100</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_38">
+        <img src="images/product_images/retailer/jacq- 23H213BA002-3000-990_13.png" alt="Handbag_38" onclick="enlargeImage(this)">
+        <h3>JACQUEMUS</h3>
+        <h3>Le Chiquito</h3>
+        <p>€ 720</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_39">
+        <img src="images/product_images/retailer/jacq- 23H223BA044-3072-811_13.png" alt="Handbag_39" onclick="enlargeImage(this)">
+        <h3></h3>
+        <h3>Le Petit Panier Solit</h3>
+        <p>€ 390</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
       <article class="product-item"  data-product-id="Handbag_40">
-        <img src="images/product_images/brand/40-louis-vuitton-petit-palais--M45900_PM2_Front view.webp" alt="Handbag_40" onclick="enlargeImage(this)">
-        <h3>LOUIS VUITTON</h3>
-        <h3>Petit Palais</h3>
-        <p>€ 2350</p>
+        <img src="images/product_images/retailer/jacq- 23H233BA356-3134-980_13.PNG" alt="Handbag_40" onclick="enlargeImage(this)">
+        <h3>JACQUEMUS</h3>
+        <h3>La Pochette Rond Carre</h3>
+        <p>€ 850</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
     </section>
+
+    <section id="productList3" class="product-list">
+
+      <article class="product-item"  data-product-id="Handbag_41">
+        <img src="images/product_images/retailer/jacq- 24E213BA007-3000-990_13.png" alt="Handbag_41" onclick="enlargeImage(this)">
+        <h3>JACQUEMUS</h3>
+        <h3>Le Grand Bambino</h3>
+        <p>€ 820</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_42">
+        <img src="images/product_images/retailer/jacq- 24H231BA057-3000-855_17.png" alt="Handbag_42" onclick="enlargeImage(this)">
+        <h3>JACQUEMUS</h3>
+        <h3>Le Bisou Perle</h3>
+        <p>€ 620</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_43">
+        <img src="images/product_images/retailer/L balenciaga-  arge-5935462AATJ1000_F.png" alt="Handbag_43" onclick="enlargeImage(this)">
+        <h3>BALENCIAGA</h3>
+        <h3>Hourglass Bag</h3>
+        <p>€ 2350</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_44">
+        <img src="images/product_images/retailer/Large-650061V2E418838_A.png" alt="Handbag_44" onclick="enlargeImage(this)">
+        <h3>BOTTEGA VENETA</h3>
+        <h3>Intrecciato Duffle</h3>
+        <p>€ 5100</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_45">
+        <img src="images/product_images/retailer/Large-730828VCPP05832_A.png" alt="Handbag_45" onclick="enlargeImage(this)">
+        <h3>BOTTEGA VENETA</h3>
+        <h3>Candy Jodie</h3>
+        <p>€ 1300</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_46">
+        <img src="images/product_images/retailer/Large-741511VCPP31019_A.png" alt="Handbag_46" onclick="enlargeImage(this)">
+        <h3>BOTTEGA VENETA</h3>
+        <h3>Long Clutch Andiamo</h3>
+        <p>€ 2400</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_47">
+        <img src="images/product_images/retailer/Large-776662V01D12190_A.png" alt="Handbag_47" onclick="enlargeImage(this)">
+        <h3>BOTTEGA VENETA</h3>
+        <h3>Knot with Chain</h3>
+        <p>€ 3600</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_48">
+        <img src="images/product_images/retailer/Large-776768VCPP19277_A.png" alt="Handbag_48" onclick="enlargeImage(this)">
+        <h3>BOTTEGA VENETA</h3>
+        <h3>Sardine with Chain</h3>
+        <p>€ 3900</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_49">
+        <img src="images/product_images/retailer/Large-785807V40Z17518_A.png" alt="Handbag_49" onclick="enlargeImage(this)">
+        <h3>LOUIS VUITTON</h3>
+        <h3>Carryall PM Monogram</h3>
+        <p>€ 2650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_50">
+        <img src="images/product_images/retailer/Large-796569VCPPT8060_A.png" alt="Handbag_50" onclick="enlargeImage(this)">
+        <h3>LOUIS VUITTON</h3>
+        <h3>Cluny Mini</h3>
+        <p>€ 2150</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_51">
+        <img src="images/product_images/retailer/Large-796571VCPPT2190_A.png" alt="Handbag_51" onclick="enlargeImage(this)">
+        <h3>LOUIS VUITTON</h3>
+        <h3>Coussin PM</h3>
+        <p>€ 3900</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_52">
+        <img src="images/product_images/retailer/Large-799488V4KT09199_A.png" alt="Handbag_52" onclick="enlargeImage(this)">
+        <h3>LOUIS VUITTON</h3>
+        <h3>Félicie Pochette Monogram</h3>
+        <p>€ 1300</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_53">
+        <img src="images/product_images/retailer/Large-799522V4GM02754_A.png" alt="Handbag_53" onclick="enlargeImage(this)">
+        <h3>LOUIS VUITTON</h3>
+        <h3>Just In Case Monogram</h3>
+        <p>€ 2250</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_54">
+        <img src="images/product_images/retailer/Loewe Untitled 2.png" alt="Handbag_54" onclick="enlargeImage(this)">
+        <h3>LOEWE</h3>
+        <h3>Flamengo Clutch</h3>
+        <p>€ 2200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_55">
+        <img src="images/product_images/retailer/Loewe Untitled 3.png" alt="Handbag_55" onclick="enlargeImage(this)">
+        <h3>LOEWE</h3>
+        <h3>Small Puzzle</h3>
+        <p>€ 2800</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_56">
+        <img src="images/product_images/retailer/Loewe Untitled 4.png" alt="Handbag_56" onclick="enlargeImage(this)">
+        <h3>LOEWE</h3>
+        <h3>Puzzle Fold Tote</h3>
+        <p>€ 1600</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_57">
+        <img src="images/product_images/retailer/Loewe Untitled 5.png" alt="Handbag_57" onclick="enlargeImage(this)">
+        <h3>LOEWE</h3>
+        <h3>Anagram Basket Bag</h3>
+        <p>€ 800</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_58">
+        <img src="images/product_images/retailer/Loewe-Untitled 1.png" alt="Handbag_58" onclick="enlargeImage(this)">
+        <h3>LOEWE</h3>
+        <h3>Squeeze Bag</h3>
+        <p>€ 3300</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_59">
+        <img src="images/product_images/retailer/loro pana- FAO1146_P08H_MEDIUM.png" alt="Handbag_59" onclick="enlargeImage(this)">
+        <h3>LORO PIANA</h3>
+        <h3>Chiera Bag</h3>
+        <p>€ 2800</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_60">
+        <img src="images/product_images/retailer/Loro piana- FAN2785_705G_MEDIUM.png" alt="Handbag_60" onclick="enlargeImage(this)">
+        <h3>LORO PIANA</h3>
+        <h3>Extra Case</h3>
+        <p>€ 2300</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+    
+    </section>
+
+    <section id="productList4" class="product-list">
+    
+      <article class="product-item"  data-product-id="Handbag_61">
+        <img src="images/product_images/retailer/Loro Piana- FAN8964_A0IH_MEDIUM.png" alt="Handbag_61" onclick="enlargeImage(this)">
+        <h3>LORO PIANA</h3>
+        <h3>Bale Bag</h3>
+        <p>€ 2900</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_62">
+        <img src="images/product_images/retailer/loro piana- FAO0185_B4AU_MEDIUM.png" alt="Handbag_62" onclick="enlargeImage(this)">
+        <h3>LORO PIANA</h3>
+        <h3>Loom L32</h3>
+        <p>€ 3900</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_63">
+        <img src="images/product_images/retailer/Loro piana- FAO0981_A0IH_MEDIUM.png" alt="Handbag_63" onclick="enlargeImage(this)">
+        <h3>LORO PIANA</h3>
+        <h3>Extra Bag L27</h3>
+        <p>€ 3200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_64">
+        <img src="images/product_images/retailer/puabo-f61888baj_00_1715782466.png" alt="Handbag_64" onclick="enlargeImage(this)">
+        <h3>A.P.C.</h3>
+        <h3>Ana Bag</h3>
+        <p>€ 350</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_65">
+        <img src="images/product_images/retailer/SMALL-VSLING-GRAINY-CALFSKIN-HANDBAG.png" alt="Handbag_65" onclick="enlargeImage(this)">
+        <h3>VALENTINO</h3>
+        <h3>VSLING Bag</h3>
+        <p>€ 2400</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_66">
+        <img src="images/product_images/retailer/TOTEME_FLATS_PF24_TRAVEL_43-WAL0044-FB0254_MONOGRAM_TRAVEL_TOTE_ECRU_front_GB_8698156a-e432-4f85-807e-b25c7d36a9be.png" alt="Handbag_66" onclick="enlargeImage(this)">
+        <h3>TOTEME</h3>
+        <h3>Monogram travel Tote</h3>
+        <p>€ 880</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_67">
+        <img src="images/product_images/retailer/TOTEME_FLATS_SS24_BAGS_242-WAL2276-LE0025_SCOOPED_SLING_BLACK_front_GB- TOTEME.png" alt="Handbag_67" onclick="enlargeImage(this)">
+        <h3>TOTEME</h3>
+        <h3>Scooped Sling Bag</h3>
+        <p>€ 690</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_68">
+        <img src="images/product_images/retailer/TOTEME_FLATSTOTEME- _PF24_BAGS_243-WAL961-LE0076_T-LOCK_TOP_HANDLE_BLACK_CROCO_front_GB.png" alt="Handbag_68" onclick="enlargeImage(this)">
+        <h3>TOTEME</h3>
+        <h3>T-Lock Top Handle</h3>
+        <p>€ 1190</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_69">
+        <img src="images/product_images/retailer/TOTEME_PF23_BAGS_233-9104-613_T-LOCK_CLUTCH_MILK_GRAIN_1_GB_2db81043-0370-4e05-97b2-a884d550d4b0.png" alt="Handbag_69" onclick="enlargeImage(this)">
+        <h3>TOTEME</h3>
+        <h3>T-Lock Clutch</h3>
+        <p>€ 890</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_70">
+        <img src="images/product_images/retailer/TOTEME_SS24_BAGS_234-WLGBG038-LE0004_BELTED_TOTE_TAN_front_GB_36267d43-62eb-4c01-b645-e4052141d2b5.png" alt="Handbag_70" onclick="enlargeImage(this)">
+        <h3>TOTEME</h3>
+        <h3>Belted Tote Tan</h3>
+        <p>€ 950</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_71">
+        <img src="images/product_images/retailer/VALENTINO-GARAVANI-LOCÒ-CALFSKIN-BUCKET-BAG.png" alt="Handbag_71" onclick="enlargeImage(this)">
+        <h3>VALENTINO</h3>
+        <h3>Loc Bucket Bag</h3>
+        <p>€ 1980</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_72">
+        <img src="images/product_images/retailer/VALENTINO-GARAVANI-LOCÒ-SMALL-EMBROIDERED-SHOULDER-BAG.png" alt="Handbag_72" onclick="enlargeImage(this)">
+        <h3>VALENTINO</h3>
+        <h3>Loc Bag Small</h3>
+        <p>€ 3700</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_73">
+        <img src="images/product_images/retailer/VALENTINO-GARAVANI-LOCÒ-SMALL-SHOULDER-BAG-IN-CALFSKIN.png" alt="Handbag_73" onclick="enlargeImage(this)">
+        <h3>VALENTINO</h3>
+        <h3>Loc Shoulder Bag</h3>
+        <p>€ 1980</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_74">
+        <img src="images/product_images/retailer/VALENTINO-GARAVANI-OHVAL-SMALL-SHOULDER-BAG-IN-NAPPA-CALFSKIN.png" alt="Handbag_74" onclick="enlargeImage(this)">
+        <h3>VALENTINO</h3>
+        <h3>Oval Shoulder Bag</h3>
+        <p>€ 2800</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_75">
+        <img src="images/product_images/retailer/VLOGO-MOON-MEDIUM-GRAINY-CALFSKIN-HOBO-BAG-WITH-CHAIN.png" alt="Handbag_75" onclick="enlargeImage(this)">
+        <h3></h3>
+        <h3>Mini Pochette Monogram</h3>
+        <p>€ 590</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_76">
+        <img src="images/product_images/retailer/W1249L39SGSF_1200x.png" alt="Handbag_76" onclick="enlargeImage(this)">
+        <h3>THE ROW</h3>
+        <h3>Half Moon Bag</h3>
+        <p>€ 1650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_77">
+        <img src="images/product_images/retailer/W1442L60BLPLF_1200x.png" alt="Handbag_77" onclick="enlargeImage(this)">
+        <h3>THE ROW</h3>
+        <h3>Sofia 8.75 Bag</h3>
+        <p>€ 3800</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_78">
+        <img src="images/product_images/retailer/W1563L39WCLGF_df2e32f6-ec9c-439a-ba52-0f0897795bd1_1200x.png" alt="Handbag_78" onclick="enlargeImage(this)">
+        <h3>THE ROW</h3>
+        <h3>Dalia Baguette</h3>
+        <p>€ 2160</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_79">
+        <img src="images/product_images/retailer/W1682L108CRAF_1200x.png" alt="Handbag_79" onclick="enlargeImage(this)">
+        <h3>THE ROW</h3>
+        <h3>Bindle Bag</h3>
+        <p>€ 1140</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_80">
+        <img src="images/product_images/retailer/W1698L129BLPLF_1200x.png" alt="Handbag_80" onclick="enlargeImage(this)">
+        <h3>THE ROW</h3>
+        <h3>EW Bowling Bag</h3>
+        <p>€ 4540</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+    </section>
+
+    <section id="productList5" class="product-list">
+
+      <article class="product-item"  data-product-id="Handbag_81">
+        <img src="images/product_images/retailer/ysl- Medium2-494699DV7271000_A.png" alt="Handbag_81" onclick="enlargeImage(this)">
+        <h3>YVES SAINT LAURENT</h3>
+        <h3>LouLou Quilted Bag</h3>
+        <p>€ 2100</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_82">
+        <img src="images/product_images/retailer/ysl- Medium2-698651AAANG1000_A.png" alt="Handbag_82" onclick="enlargeImage(this)">
+        <h3>YVES SAINT LAURENT</h3>
+        <h3>Icare Maxi Quilted Bag</h3>
+        <p>€ 4100</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_83">
+        <img src="images/product_images/retailer/ysl- Medium2-761554DV7077715_A.png" alt="Handbag_83" onclick="enlargeImage(this)">
+        <h3>YVES SAINT LAURENT</h3>
+        <h3>Lou Camera Quilted Bag</h3>
+        <p>€ 1450</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_84">
+        <img src="images/product_images/retailer/ysl- Medium2-773991GAAD72080_A.png" alt="Handbag_84" onclick="enlargeImage(this)">
+        <h3>YVES SAINT LAURENT</h3>
+        <h3>Le 37 Raffia </h3>
+        <p>€ 2600</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_85">
+        <img src="images/product_images/retailer/ysl- Medium2-800916AACYT3212_A.png" alt="Handbag_85" onclick="enlargeImage(this)">
+        <h3>YVES SAINT LAURENT</h3>
+        <h3>Calypso Bag</h3>
+        <p>€ 2500</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_86">
+        <img src="images/product_images/retailer/116592FRH.04LU_1_SS24_P2_W.png" alt="Handbag_86" onclick="enlargeImage(this)">
+        <h3>CELINE</h3>
+        <h3>Teen Victoire Triomphe</h3>
+        <p>€ 2700</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_87">
+        <img src="images/product_images/retailer/652683_96GAG_9785_001_062_0000_Light-Padlock-Mini-Tasche.png" alt="Handbag_87" onclick="enlargeImage(this)">
+        <h3>GUCCI</h3>
+        <h3>Padlock Pocket</h3>
+        <p>€ 1200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_88">
+        <img src="images/product_images/retailer/chloe 2- w1536.png" alt="Handbag_88" onclick="enlargeImage(this)">
+        <h3>LOUIS VUITTON</h3>
+        <h3>Onthego MM - Monogram</h3>
+        <p>€ 2650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_89">
+        <img src="images/product_images/retailer/chloe 3-w1536.png" alt="Handbag_89" onclick="enlargeImage(this)">
+        <h3>CHLOE</h3>
+        <h3>The 99 Shoulder Bag</h3>
+        <p>€ 1590</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_90">
+        <img src="images/product_images/retailer/chloe 4- w1536.png" alt="Handbag_90" onclick="enlargeImage(this)">
+        <h3>CHLOE</h3>
+        <h3>Woody Basket Bag</h3>
+        <p>€ 650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_91">
+        <img src="images/product_images/retailer/chloe 5-w1536.png" alt="Handbag_91" onclick="enlargeImage(this)">
+        <h3>CHLOE</h3>
+        <h3>Cape Bag</h3>
+        <p>€ 2400</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_92">
+        <img src="images/product_images/retailer/chloe- w1536.png" alt="Handbag_92" onclick="enlargeImage(this)">
+        <h3>CHLOE</h3>
+        <h3>Paraty 24 Bag</h3>
+        <p>€ 1890</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_93">
+        <img src="images/product_images/retailer/d and g- BB5970AT878_8B703_0.png" alt="Handbag_93" onclick="enlargeImage(this)">
+        <h3>DOLCE & GABANNA</h3>
+        <h3>Box Handbag</h3>
+        <p>€ 8500</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_94">
+        <img src="images/product_images/retailer/d and g- BB6002A1001_80303_0.png" alt="Handbag_94" onclick="enlargeImage(this)">
+        <h3>DOLCE & GABANNA</h3>
+        <h3>Sicily Handbag</h3>
+        <p>€ 1650</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_95">
+        <img src="images/product_images/retailer/d and g- BB6498AS110_HN4YF_0.png" alt="Handbag_95" onclick="enlargeImage(this)">
+        <h3>DOLCE & GABANNA</h3>
+        <h3>DG Girls Shoulder Bag</h3>
+        <p>€ 2500</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_96">
+        <img src="images/product_images/retailer/KHAITE- LIA_BLACK-HONEY_1399_Product_1080x.png" alt="Handbag_96" onclick="enlargeImage(this)">
+        <h3>KHAITE</h3>
+        <h3>Lia Bag</h3>
+        <p>€ 3200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_97">
+        <img src="images/product_images/retailer/KHAITE- LIILITH_OPTICWHITE_SHEARLING_1122_Product_1080x.png" alt="Handbag_97" onclick="enlargeImage(this)">
+        <h3>KHAITE</h3>
+        <h3>Lilith Bag</h3>
+        <p>€ 3400</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+
+      <article class="product-item"  data-product-id="Handbag_98">
+        <img src="images/product_images/retailer/KHAITE- LINA_CROSSBODY_ROUGE-NOIR_SUEDE_0909_Product_1080x.png" alt="Handbag_98" onclick="enlargeImage(this)">
+        <h3>KHAITE</h3>
+        <h3>Lina Crossbody bag</h3>
+        <p>€ 1280</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_99">
+        <img src="images/product_images/retailer/KHAITE- LOTUS_BLACK-LEATHER_1871_Product_1080x.png" alt="Handbag_99" onclick="enlargeImage(this)">
+        <h3>KHAITE</h3>
+        <h3>Lotus Tote</h3>
+        <p>€ 2800</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+      <article class="product-item"  data-product-id="Handbag_100">
+        <img src="images/product_images/retailer/KHAITE- ZOE_ROUGENOIR_MULTI_2076_Product_324de28d-65f9-4f05-b2e8-bcc79ab2e6cb_1080x.png" alt="Handbag_100" onclick="enlargeImage(this)">
+        <h3>KHAITE</h3>
+        <h3>Zoe Tote</h3>
+        <p>€ 3200</p>
+        <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
+        <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
+      </article>
+
+    </section>
+   
     <div class="page-navigation">
       <button id="prevPageBottom" onclick="changePage(-1)">Previous Page</button>
       <button id="nextPageBottom" onclick="changePage(1)">Next Page</button>
