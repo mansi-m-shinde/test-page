@@ -177,24 +177,57 @@
       if (currentPage > totalPages) currentPage = totalPages;
 
       updatePageDisplay();
+      generatePageNumbers(currentPage, totalPages); // Update page numbers when page changes
     }
 
     function updatePageDisplay() {
       for (let i = 1; i <= totalPages; i++) {
         const pageElement = document.getElementById(`productList${i}`);
-        if (i === currentPage) {
-          pageElement.classList.add('active');
-        } else {
-          pageElement.classList.remove('active');
+        if (pageElement) {
+          if (i === currentPage) {
+            pageElement.classList.add('active');
+          } else {
+            pageElement.classList.remove('active');
+          }
         }
       }
 
-      document.getElementById('prevPage').disabled = currentPage === 1;
-      document.getElementById('nextPage').disabled = currentPage === totalPages;
       document.getElementById('prevPageBottom').disabled = currentPage === 1;
       document.getElementById('nextPageBottom').disabled = currentPage === totalPages;
     }
 
+    function generatePageNumbers(currentPage, totalPages) {
+      const pageNumbersContainer = document.getElementById('pageNumbers');
+      if (pageNumbersContainer) {
+        pageNumbersContainer.innerHTML = ''; // Clear existing page numbers
+
+        for (let i = 1; i <= totalPages; i++) {
+          const pageNumber = document.createElement('span');
+          pageNumber.textContent = i;
+          pageNumber.classList.add('page-number');
+          if (i === currentPage) {
+            pageNumber.classList.add('current-page');
+          }
+          pageNumber.onclick = function() {
+            changePageTo(i);
+          };
+          pageNumbersContainer.appendChild(pageNumber);
+        }
+      }
+    }
+
+    function changePageTo(page) {
+      currentPage = page;
+      updatePageDisplay();
+      generatePageNumbers(currentPage, totalPages);
+      console.log("Current Page:", currentPage);
+    }
+
+    // Generate initial page numbers
+    document.addEventListener('DOMContentLoaded', function() {
+      generatePageNumbers(currentPage, totalPages);
+      updatePageDisplay();
+    });
     // Initialize page display
     window.onload = function() {
       startTimer();
@@ -1181,6 +1214,7 @@
 
     </section>
    
+    <div id="pageNumbers" class="page-numbers"></div>
     <div class="page-navigation">
       <button id="prevPageBottom" onclick="changePage(-1)">Previous Page</button>
       <button id="nextPageBottom" onclick="changePage(1)">Next Page</button>

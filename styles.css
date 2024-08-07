@@ -348,6 +348,25 @@ button.added-to-cart {
   display: none; /* Hidden by default */
 }
 
+.page-numbers {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.page-number {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.page-number.current-page {
+  background-color: #362b18;
+  color: white;
+}
+
 /* Media Queries for Responsive Design */
 
 @media (min-width: 2160px) {

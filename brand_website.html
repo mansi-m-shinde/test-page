@@ -159,7 +159,7 @@
     }
 
     let currentPage = 1;
-    const totalPages = 6; // Update this based on your total number of pages
+    const totalPages = 5; // Update this based on your total number of pages
 
     function changePage(direction) {
       currentPage += direction;
@@ -167,24 +167,57 @@
       if (currentPage > totalPages) currentPage = totalPages;
 
       updatePageDisplay();
+      generatePageNumbers(currentPage, totalPages); // Update page numbers when page changes
     }
 
     function updatePageDisplay() {
       for (let i = 1; i <= totalPages; i++) {
         const pageElement = document.getElementById(`productList${i}`);
-        if (i === currentPage) {
-          pageElement.classList.add('active');
-        } else {
-          pageElement.classList.remove('active');
+        if (pageElement) {
+          if (i === currentPage) {
+            pageElement.classList.add('active');
+          } else {
+            pageElement.classList.remove('active');
+          }
         }
       }
 
-      document.getElementById('prevPage').disabled = currentPage === 1;
-      document.getElementById('nextPage').disabled = currentPage === totalPages;
       document.getElementById('prevPageBottom').disabled = currentPage === 1;
       document.getElementById('nextPageBottom').disabled = currentPage === totalPages;
     }
 
+    function generatePageNumbers(currentPage, totalPages) {
+      const pageNumbersContainer = document.getElementById('pageNumbers');
+      if (pageNumbersContainer) {
+        pageNumbersContainer.innerHTML = ''; // Clear existing page numbers
+
+        for (let i = 1; i <= totalPages; i++) {
+          const pageNumber = document.createElement('span');
+          pageNumber.textContent = i;
+          pageNumber.classList.add('page-number');
+          if (i === currentPage) {
+            pageNumber.classList.add('current-page');
+          }
+          pageNumber.onclick = function() {
+            changePageTo(i);
+          };
+          pageNumbersContainer.appendChild(pageNumber);
+        }
+      }
+    }
+
+    function changePageTo(page) {
+      currentPage = page;
+      updatePageDisplay();
+      generatePageNumbers(currentPage, totalPages);
+      console.log("Current Page:", currentPage);
+    }
+
+    // Generate initial page numbers
+    document.addEventListener('DOMContentLoaded', function() {
+      generatePageNumbers(currentPage, totalPages);
+      updatePageDisplay();
+    });
     // Initialize page display
     window.onload = function() {
       startTimer();
@@ -270,10 +303,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_3">
-        <img src="images/product_images/brand/3-louis-vuitton-neverfull-mm-monogram-canvas-handbags--M46975_PM2_Front view-(1500 EUR).webp" alt="Handbag_3" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-atlantis-bb-monogram-reverse-canvas-handtaschen--M46816_PM2_Front view.png" alt="Handbag_44" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Neverfull MM</h3>
-        <p>€ 1500</p>
+        <h3>Atlantis BB Monogram</h3>
+        <p>€ 2350</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -288,10 +321,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_5">
-        <img src="images/product_images/brand/5-louis-vuitton-neverfull-mm-monogram-empreinte-leather-handbags--M58907_PM2_Front view.png" alt="Handbag_5" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-alma-bb-epi-leder-handtaschen--M24645_PM2_Front view.png" alt="Handbag_41" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Neverfull MM</h3>
-        <p>€ 2200</p>
+        <h3>Alma BB</h3>
+        <p>€ 1650</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -306,19 +339,19 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_7">
-        <img src="images/product_images/brand/7-louis-vuitton-petite-malle-monogram-reverse-canvas-handbags--M45960_PM2_Front view.png" alt="Handbag_7" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-atlantis-gm-autres-toiles-monogram-handtaschen--M24409_PM2_Front view.png" alt="Handbag_45" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Petite Malle Monogram</h3>
-        <p>€ 5000</p>
+        <h3>Atlantis GM Monogram</h3>
+        <p>€ 2700</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_8">
-        <img src="images/product_images/brand/8-louis-vuitton--M44935_PM2_Front view-(2400 EUR).png" alt="Handbag_8" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-canoé-monogram-canvas-handtaschen-M83480_PM2_Front-view.png" alt="Handbag_48" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Nice  BB Monogram</h3>
-        <p>€ 2400</p>
+        <h3>Canoé Monogram Canvas</h3>
+        <p>€ 2500</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -333,28 +366,28 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_10">
-        <img src="images/product_images/brand/10-louis-vuitton-graceful-mm-monogram-canvas-handbags--M43703_PM2_Front view.PNG" alt="Handbag_10" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-speedy-20-mit-schulterriemen-autres-toiles-monogram-handtaschen--M11209_PM2_Front view.png" alt="Handbag_97" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Graceful MM Monogram</h3>
-        <p>€ xxxx</p>
+        <h3>Speedy Monogram</h3>
+        <p>€ 2150</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_11">
-        <img src="images/product_images/brand/11-louis-vuitton--M45833_PM2_Front view-(2700 eur).PNG" alt="Handbag_11" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-lvacation-bucket-bag-autres-toiles-monogram-handtaschen--M25144_PM2_Front view.png" alt="Handbag_65" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Grand Palais</h3>
-        <p>€ 2700</p>
+        <h3>Low Key Shoulder Bag</h3>
+        <p>€ 2200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_12">
-        <img src="images/product_images/brand/12-louis-vuitton--M22735_PM2_Front view-(2500 EUR)-PNG.png" alt="Handbag_12" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-carryall-pm-monogram-empreinte-leder-handtaschen-M46288_PM2_Front-view.png" alt="Handbag_49" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Oxford Lockme</h3>
-        <p>€ 2500</p>
+        <h3>Carryall PM Monogram</h3>
+        <p>€ 2650</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -369,10 +402,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_14">
-        <img src="images/product_images/brand/14-louis-vuitton-felicie-pochette--M81896_PM2_Front view.PNG" alt="Handbag_14" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-loop-autres-toiles-monogram-handtaschen--M24846_PM2_Front view.png" alt="Handbag_58" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Felicie Pochette</h3>
-        <p>€ 1200</p>
+        <h3>Loop Monogram</h3>
+        <p>€ 2600</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -387,10 +420,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_16">
-        <img src="images/product_images/brand/16-louis-vuitton-wallet-on-chain-ivy-monogram-canvas-handtaschen--M81911_PM2_Front view.PNG" alt="Handbag_16" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-let-go-pm-autres-toiles-monogram-handtaschen-M24897_PM2_Front-view.png" alt="Handbag_54" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Ivy Wallet on chain Monogram</h3>
-        <p>€ 1490</p>
+        <h3>Let Go PM </h3>
+        <p>€ 2800</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -405,10 +438,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_18">
-        <img src="images/product_images/brand/18-louis-vuitton-lock-go-lockme-leather-handbags--M22311_PM2_Front view.PNG" alt="Handbag_18" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-low-key-hobo-mm-schlicht-handtaschen--M24974_PM2_Front view.png" alt="Handbag_62" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Lock & Go</h3>
-        <p>€ 2700</p>
+        <h3>Low Key Hobo MM</h3>
+        <p>€ 3200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -437,10 +470,10 @@
     <section id="productList2" class="product-list">
 
       <article class="product-item"  data-product-id="Handbag_21">
-        <img src="images/product_images/brand/21-louis-vuitton--M82952_PM2_Front view.png" alt="Handbag_21" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-marelle-tote-bb-epi-leder-handtaschen--M59952_PM2_Front view.png" alt="Handbag_70" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Nano Cannes</h3>
-        <p>€ 2100</p>
+        <h3>Marelle Tote BB</h3>
+        <p>€ 2350</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -455,10 +488,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_23">
-        <img src="images/product_images/brand/23-louis-vuitton-onthego-mm-monogram-canvas-handbags--M45321_PM2_Front view.png" alt="Handbag_23" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-coussin-pm-coussin-auswahl-für-damen--M11225_PM2_Front view.png" alt="Handbag_51" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>On The Go</h3>
-        <p>€ 1950</p>
+        <h3>Coussin PM</h3>
+        <p>€ 3900</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -482,19 +515,19 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_26">
-        <img src="images/product_images/brand/26-louis-vuitton-atlantis-gm-monogram-canvas-handbags--M46817_PM1_Back view.png" alt="Handbag_26" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-mini-moon-monogram-empreinte-leder-geldbörsen-und-kleinlederwaren--M82519_PM2_Front view.png" alt="Handbag_74" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Atlantis GM Monogram</h3>
-        <p>€ 2600</p>
+        <h3>Mini Bumbag Monogram</h3>
+        <p>€ 1440</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_27">
-        <img src="images/product_images/brand/27-louis-vuitton-diane-monogram-canvas-handtaschen--M46049_PM2_Front view.png" alt="Handbag_27" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-neverfull-mm-damier-azur-canvas-handtaschen--N40604_PM2_Front view.png" alt="Handbag_84" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Diane Monogram</h3>
-        <p>€ 2000</p>
+        <h3>Neverfull MM Canvas Monogram</h3>
+        <p>€ 1500</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -518,10 +551,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_30">
-        <img src="images/product_images/brand/30-louis-vuitton-alma-pm-monogram-canvas-handbags--M53151_PM2_Front view.png" alt="Handbag_30" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-nano-speedy-autres-toiles-monogram-geldbörsen-und-kleinlederwaren--M83525_PM2_Front view.png" alt="Handbag_79" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Alma PM Monogram</h3>
-        <p>€ 1650</p>
+        <h3>Nano Speedy Raffia</h3>
+        <p>€ 2000</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -545,19 +578,19 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_33">
-        <img src="images/product_images/brand/33- louis-vuitton--M12859_PM2_Front view.png" alt="Handbag_33" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-twist-west-andere-lederarten-auswahl-für-damen--M25030_PM2_Front view.png" alt="Handbag_94" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Pouchette Tirette</h3>
-        <p>€ 1600</p>
+        <h3>Twist West- Monogram</h3>
+        <p>€ 3600</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_34">
-        <img src="images/product_images/brand/34-louis-vuitton-dauphine-mm-autres-toiles-monogram-handtaschen--M45958_PM2_Front view-2800 EUR.png" alt="Handbag_34" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-onthego-bb-monogram-empreinte-leder-handtaschen--M47115_PM2_Front view.png" alt="Handbag_86" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Dauphine MM Monogram</h3>
-        <p>€ 3100</p>
+        <h3>Onthego BB - Monogram</h3>
+        <p>€ 2600</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -572,10 +605,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_36">
-        <img src="images/product_images/brand/36- louis-vuitton--M46311_PM2_Front view.png" alt="Handbag_36" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-onthego-mm-monogram-empreinte-leder-handtaschen--M45607_PM2_Front view.png" alt="Handbag_89" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Loop Hobo Monogram Canvas</h3>
-        <p>€ 1900</p>
+        <h3>Onthego MM - Monogram</h3>
+        <p>€ 2600</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -590,10 +623,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_38">
-        <img src="images/product_images/brand/38-louis-vuitton--M45165_PM2_Front view- 2350 EUR.png" alt="Handbag_38" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/10-louis-vuitton-graceful-mm-monogram-canvas-handbags--M43703_PM2_Front view.PNG" alt="Handbag_10" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Vanity PM</h3>
-        <p>€ 2400</p>
+        <h3>Graceful MM Monogram</h3>
+        <p>€ xxxx</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -608,10 +641,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_40">
-        <img src="images/product_images/brand/40-louis-vuitton-petit-palais--M45900_PM2_Front view.webp" alt="Handbag_40" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/louis-vuitton-wallet-on-chain-ivy-autres-toiles-monogram-geldbörsen-und-kleinlederwaren--M83499_PM2_Front view.png" alt="Handbag_91" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Petit Palais</h3>
-        <p>€ 2350</p>
+        <h3>Wallet on Chain Ivy Monogram - Monogram</h3>
+        <p>€ 1900</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -621,10 +654,10 @@
     <section id="productList3" class="product-list">
 
       <article class="product-item"  data-product-id="Handbag_41">
-        <img src="images/product_images/brand/louis-vuitton-alma-bb-epi-leder-handtaschen--M24645_PM2_Front view.png" alt="Handbag_41" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/5-louis-vuitton-neverfull-mm-monogram-empreinte-leather-handbags--M58907_PM2_Front view.png" alt="Handbag_5" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Alma BB</h3>
-        <p>€ 1650</p>
+        <h3>Neverfull MM</h3>
+        <p>€ 2200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -648,19 +681,19 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_44">
-        <img src="images/product_images/brand/louis-vuitton-atlantis-bb-monogram-reverse-canvas-handtaschen--M46816_PM2_Front view.png" alt="Handbag_44" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/3-louis-vuitton-neverfull-mm-monogram-canvas-handbags--M46975_PM2_Front view-(1500 EUR).webp" alt="Handbag_3" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Atlantis BB Monogram</h3>
-        <p>€ 2350</p>
+        <h3>Neverfull MM</h3>
+        <p>€ 1500</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_45">
-        <img src="images/product_images/brand/louis-vuitton-atlantis-gm-autres-toiles-monogram-handtaschen--M24409_PM2_Front view.png" alt="Handbag_45" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/7-louis-vuitton-petite-malle-monogram-reverse-canvas-handbags--M45960_PM2_Front view.png" alt="Handbag_7" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Atlantis GM Monogram</h3>
-        <p>€ 2700</p>
+        <h3>Petite Malle Monogram</h3>
+        <p>€ 5000</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -684,19 +717,19 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_48">
-        <img src="images/product_images/brand/louis-vuitton-canoé-monogram-canvas-handtaschen-M83480_PM2_Front-view.png" alt="Handbag_48" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/8-louis-vuitton--M44935_PM2_Front view-(2400 EUR).png" alt="Handbag_8" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Canoé Monogram Canvas</h3>
-        <p>€ 2500</p>
+        <h3>Nice  BB Monogram</h3>
+        <p>€ 2400</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
 
       <article class="product-item"  data-product-id="Handbag_49">
-        <img src="images/product_images/brand/louis-vuitton-carryall-pm-monogram-empreinte-leder-handtaschen-M46288_PM2_Front-view.png" alt="Handbag_49" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/12-louis-vuitton--M22735_PM2_Front view-(2500 EUR)-PNG.png" alt="Handbag_12" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Carryall PM Monogram</h3>
-        <p>€ 2650</p>
+        <h3>Oxford Lockme</h3>
+        <p>€ 2500</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -711,10 +744,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_51">
-        <img src="images/product_images/brand/louis-vuitton-coussin-pm-coussin-auswahl-für-damen--M11225_PM2_Front view.png" alt="Handbag_51" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/11-louis-vuitton--M45833_PM2_Front view-(2700 eur).PNG" alt="Handbag_11" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Coussin PM</h3>
-        <p>€ 3900</p>
+        <h3>Grand Palais</h3>
+        <p>€ 2700</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -738,10 +771,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_54">
-        <img src="images/product_images/brand/louis-vuitton-let-go-pm-autres-toiles-monogram-handtaschen-M24897_PM2_Front-view.png" alt="Handbag_54" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/16-louis-vuitton-wallet-on-chain-ivy-monogram-canvas-handtaschen--M81911_PM2_Front view.PNG" alt="Handbag_16" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Let Go PM </h3>
-        <p>€ 2800</p>
+        <h3>Ivy Wallet on chain Monogram</h3>
+        <p>€ 1490</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -774,10 +807,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_58">
-        <img src="images/product_images/brand/louis-vuitton-loop-autres-toiles-monogram-handtaschen--M24846_PM2_Front view.png" alt="Handbag_58" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/14-louis-vuitton-felicie-pochette--M81896_PM2_Front view.PNG" alt="Handbag_14" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Loop Monogram</h3>
-        <p>€ 2600</p>
+        <h3>Felicie Pochette</h3>
+        <p>€ 1200</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -814,10 +847,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_62">
-        <img src="images/product_images/brand/louis-vuitton-low-key-hobo-mm-schlicht-handtaschen--M24974_PM2_Front view.png" alt="Handbag_62" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/18-louis-vuitton-lock-go-lockme-leather-handbags--M22311_PM2_Front view.PNG" alt="Handbag_18" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Low Key Hobo MM</h3>
-        <p>€ 3200</p>
+        <h3>Lock & Go</h3>
+        <p>€ 2700</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -841,10 +874,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_65">
-        <img src="images/product_images/brand/louis-vuitton-lvacation-bucket-bag-autres-toiles-monogram-handtaschen--M25144_PM2_Front view.png" alt="Handbag_65" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/23-louis-vuitton-onthego-mm-monogram-canvas-handbags--M45321_PM2_Front view.png" alt="Handbag_23" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Low Key Shoulder Bag</h3>
-        <p>€ 2200</p>
+        <h3>On The Go</h3>
+        <p>€ 1950</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -886,10 +919,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_70">
-        <img src="images/product_images/brand/louis-vuitton-marelle-tote-bb-epi-leder-handtaschen--M59952_PM2_Front view.png" alt="Handbag_70" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/21-louis-vuitton--M82952_PM2_Front view.png" alt="Handbag_21" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Marelle Tote BB</h3>
-        <p>€ 2350</p>
+        <h3>Nano Cannes</h3>
+        <p>€ 2100</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -922,10 +955,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_74">
-        <img src="images/product_images/brand/louis-vuitton-mini-moon-monogram-empreinte-leder-geldbörsen-und-kleinlederwaren--M82519_PM2_Front view.png" alt="Handbag_74" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/26-louis-vuitton-atlantis-gm-monogram-canvas-handbags--M46817_PM1_Back view.png" alt="Handbag_26" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Mini Bumbag Monogram</h3>
-        <p>€ 1440</p>
+        <h3>Atlantis GM Monogram</h3>
+        <p>€ 2600</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -967,10 +1000,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_79">
-        <img src="images/product_images/brand/louis-vuitton-nano-speedy-autres-toiles-monogram-geldbörsen-und-kleinlederwaren--M83525_PM2_Front view.png" alt="Handbag_79" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/30-louis-vuitton-alma-pm-monogram-canvas-handbags--M53151_PM2_Front view.png" alt="Handbag_30" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Nano Speedy Raffia</h3>
-        <p>€ 2000</p>
+        <h3>Alma PM Monogram</h3>
+        <p>€ 1650</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1016,10 +1049,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_84">
-        <img src="images/product_images/brand/louis-vuitton-neverfull-mm-damier-azur-canvas-handtaschen--N40604_PM2_Front view.png" alt="Handbag_84" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/27-louis-vuitton-diane-monogram-canvas-handtaschen--M46049_PM2_Front view.png" alt="Handbag_27" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Neverfull MM Canvas Monogram</h3>
-        <p>€ 1500</p>
+        <h3>Diane Monogram</h3>
+        <p>€ 2000</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1034,10 +1067,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_86">
-        <img src="images/product_images/brand/louis-vuitton-onthego-bb-monogram-empreinte-leder-handtaschen--M47115_PM2_Front view.png" alt="Handbag_86" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/34-louis-vuitton-dauphine-mm-autres-toiles-monogram-handtaschen--M45958_PM2_Front view-2800 EUR.png" alt="Handbag_34" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Onthego BB - Monogram</h3>
-        <p>€ 2600</p>
+        <h3>Dauphine MM Monogram</h3>
+        <p>€ 3100</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1061,10 +1094,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_89">
-        <img src="images/product_images/brand/louis-vuitton-onthego-mm-monogram-empreinte-leder-handtaschen--M45607_PM2_Front view.png" alt="Handbag_89" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/36- louis-vuitton--M46311_PM2_Front view.png" alt="Handbag_36" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Onthego MM - Monogram</h3>
-        <p>€ 2600</p>
+        <h3>Loop Hobo Monogram Canvas</h3>
+        <p>€ 1900</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1079,10 +1112,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_91">
-        <img src="images/product_images/brand/louis-vuitton-wallet-on-chain-ivy-autres-toiles-monogram-geldbörsen-und-kleinlederwaren--M83499_PM2_Front view.png" alt="Handbag_91" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/40-louis-vuitton-petit-palais--M45900_PM2_Front view.webp" alt="Handbag_40" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Wallet on Chain Ivy Monogram - Monogram</h3>
-        <p>€ 1900</p>
+        <h3>Petit Palais</h3>
+        <p>€ 2350</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1106,10 +1139,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_94">
-        <img src="images/product_images/brand/louis-vuitton-twist-west-andere-lederarten-auswahl-für-damen--M25030_PM2_Front view.png" alt="Handbag_94" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/33- louis-vuitton--M12859_PM2_Front view.png" alt="Handbag_33" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Twist West- Monogram</h3>
-        <p>€ 3600</p>
+        <h3>Pouchette Tirette</h3>
+        <p>€ 1600</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1133,10 +1166,10 @@
       </article>
 
       <article class="product-item"  data-product-id="Handbag_97">
-        <img src="images/product_images/brand/louis-vuitton-speedy-20-mit-schulterriemen-autres-toiles-monogram-handtaschen--M11209_PM2_Front view.png" alt="Handbag_97" onclick="enlargeImage(this)">
+        <img src="images/product_images/brand/38-louis-vuitton--M45165_PM2_Front view- 2350 EUR.png" alt="Handbag_38" onclick="enlargeImage(this)">
         <h3>LOUIS VUITTON</h3>
-        <h3>Speedy Monogram</h3>
-        <p>€ 2150</p>
+        <h3>Vanity PM</h3>
+        <p>€ 2400</p>
         <button class="add-to-cart" onclick="addToCart(this)">Add to Cart</button>
         <button class="remove-from-cart" onclick="removeFromCart(this)" disabled>Remove from Cart</button>
       </article>
@@ -1171,6 +1204,7 @@
 
     </section>
    
+    <div id="pageNumbers" class="page-numbers"></div>
     <div class="page-navigation">
       <button id="prevPageBottom" onclick="changePage(-1)">Previous Page</button>
       <button id="nextPageBottom" onclick="changePage(1)">Next Page</button>
