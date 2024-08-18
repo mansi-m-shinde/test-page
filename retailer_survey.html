@@ -13,9 +13,10 @@
         }
         function prefillSurvey() {
             var timeSpent = getQueryParam('timeSpent');
+            var cartitems = getQueryParam('cartitems');
             if (timeSpent) {
                 // Change the corresponding entry code in the actual form (entry.1777040360=)
-                var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent);
+                var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdTPhvs1qYdMv8eLzB9M1HUrShhJFaYwPOoOL1buJDOqHZaJA/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent) + '&entry.239722355=' + encodeURIComponent(cartitems);
                 document.getElementById('surveyIframe').src = formUrl;
             }
         }
@@ -23,16 +24,10 @@
 </head>
 
 <body onload="prefillSurvey()">
-    <header>
-      <img src="images/retailer-banner.png" alt="Header Image" class="header-image">
-    </header>
     <header class="fixed-header">
       <h1>LUXE COUTURE</h1>
-      <!-- Update the version when pushing to check if the webpage has updated too -->
-      <!-- <h3>Version 1.03</h3>  -->
       <nav>
         <ul>
-          <!-- <li><a href="#">Home</a></li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -41,7 +36,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="survey-content">
         <section id="survey">
             <p class="centered-text">Please fill out the form below:</p>
             <div class="form-container">

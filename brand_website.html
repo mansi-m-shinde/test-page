@@ -59,7 +59,7 @@
       // Check if three products are added
         if (cart.size === 3) {
           // endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
-          alert('Thank You for shopping! Please click on the "Ok" button to fill out the survey :) Cart Items: ' + Array.from(cart))
+          alert('Thank You for shopping! Please click on the "Ok" button to fill out the survey :)')
           redirectToSurvey()
         }
       }
@@ -128,7 +128,7 @@
         // const prefilledSurveyUrl = `${surveyUrl}?entry.1234567890=${timeSpent}`; // Replace entry.1234567890 with your form's entry field ID
         // window.location.href = prefilledSurveyUrl;
         // alert('Redirecting to Survey. Time Spent: ' + timeSpent)
-        window.location.href = 'brand_survey.html?timeSpent=' + encodeURIComponent(timeSpent);
+        window.location.href = 'brand_survey.html?timeSpent=' + encodeURIComponent(timeSpent) + '&cartitems=' + encodeURIComponent(Array.from(cart));
 
         localStorage.clear();
         sessionStorage.clear();
@@ -236,7 +236,7 @@
     <nav>
       <ul>
         <!-- <li><a href="#">Home</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" target="_blank">Contact</a></li>
       </ul>
     </nav>
     <div id="timer-container">

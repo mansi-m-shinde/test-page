@@ -214,6 +214,11 @@ p.centered-text {
   padding: 1rem;
 }
 
+.survey-content {
+  margin-top: 250px; /* Adjust to avoid content being hidden behind the fixed header and timer */
+  padding: 1rem;
+}
+
 .instructions-box {
   background-color: #f0f0f0;
   border: 1px solid #ccc;

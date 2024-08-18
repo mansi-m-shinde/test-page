@@ -13,9 +13,10 @@
         }
         function prefillSurvey() {
             var timeSpent = getQueryParam('timeSpent');
+            var cartitems = getQueryParam('cartitems');
             if (timeSpent) {
                 // Change the corresponding entry code in the actual form (entry.1777040360=)
-                var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe1TqLz5DpnL22yvUWpsO58bAsvCy9q-2EsDFG5ywAd6zey4w/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent);
+                var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe1TqLz5DpnL22yvUWpsO58bAsvCy9q-2EsDFG5ywAd6zey4w/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent) + '&entry.308659857=' + encodeURIComponent(cartitems);
                 document.getElementById('surveyIframe').src = formUrl;
             }
         }
@@ -23,13 +24,8 @@
 </head>
 
 <body onload="prefillSurvey()">
-    <header>
-      <img src="images/lv_banner.png" alt="Header Image" class="header-image-survey">
-    </header>
     <header class="fixed-header">
       <h1>LOUIS VUITTON</h1>
-      <!-- Update the version when pushing to check if the webpage has updated too -->
-      <!-- <h3>Version 1.03</h3>  -->
       <nav>
         <ul>
           <li><a href="contact.html">Contact</a></li>
@@ -40,7 +36,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="survey-content">
         <section id="survey">
             <p class="centered-text">Please fill out the form below:</p>
             <div class="form-container">
@@ -53,7 +49,7 @@
     <footer>
       <!-- <p>&copy; 2024 LUXURY HANDBAGS</p> -->
       <p>Made with &hearts; by Mansi</p>
-    <p>Please note that this is only a demo website only meant to help with my Master's Thesis. No images are owned by the creator of this website and are only used for research purposes. Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> is licensed by CC BY 4.0</p>
+      <p>Please note that this is only a demo website only meant to help with my Master's Thesis. No images are owned by the creator of this website and are only used for research purposes. Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> is licensed by CC BY 4.0</p>
     </footer>
 </body>
 </html>
