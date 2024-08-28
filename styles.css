@@ -131,14 +131,14 @@ footer {
 #timer-container {
   width: 100%;
   background-color: #f0f0f0;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   border-top: 2px solid #362b18;
   border-bottom: 2px solid #362b18;
   position: fixed;
-  top: 150px; /* Adjust this value based on the height of the header */
+  top: 110px; /* Adjust this value based on the height of the header */
   left: 0;
   z-index: 1000;
 }

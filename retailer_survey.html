@@ -16,6 +16,7 @@
             var cartitems = getQueryParam('cartitems');
             if (timeSpent) {
                 // Change the corresponding entry code in the actual form (entry.1777040360=)
+                // https://docs.google.com/forms/d/e/1FAIpQLSfF-qZJfRBimiyZu8KdsNhaV3gekD7kcJlJyw60GzG-6xUK_g/viewform?usp=pp_url&entry.1777040360=sec&entry.308659857=bags
                 var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfF-qZJfRBimiyZu8KdsNhaV3gekD7kcJlJyw60GzG-6xUK_g/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent) + '&entry.308659857=' + encodeURIComponent(cartitems);
                 document.getElementById('surveyIframe').src = formUrl;
             }
@@ -46,10 +47,10 @@
         </section>
     </main>
 
-    <footer>
+    <!-- <footer>
       <!-- <p>&copy; 2024 LUXURY HANDBAGS</p> -->
       <p>Made with &hearts; by Mansi</p>
       <p>Please note that this is only a demo website only meant to help with my Master's Thesis. No images are owned by the creator of this website and are only used for research purposes. Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a> is licensed by CC BY 4.0</p>
-    </footer>
+    </footer> -->
 </body>
 </html>

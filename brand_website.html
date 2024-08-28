@@ -60,7 +60,8 @@
         if (cart.size === 3) {
           // endSession(); // TODO: Replace this with a final message (maybe directly to the survey)
           alert('Thank You for shopping! Please click on the "Ok" button to fill out the survey :)')
-          redirectToSurvey()
+          // redirectToSurvey()
+          redirectToForms()
         }
       }
 
@@ -129,6 +130,22 @@
         // window.location.href = prefilledSurveyUrl;
         // alert('Redirecting to Survey. Time Spent: ' + timeSpent)
         window.location.href = 'brand_survey.html?timeSpent=' + encodeURIComponent(timeSpent) + '&cartitems=' + encodeURIComponent(Array.from(cart));
+
+        localStorage.clear();
+        sessionStorage.clear();
+      }
+    }
+
+    function redirectToForms() {
+      clearInterval(timerInterval);
+      let loginTime = localStorage.getItem('loginTime');
+      if (loginTime) {
+        let endTime = new Date().getTime();
+        let timeSpent = (endTime - loginTime) / 1000; // Time in seconds
+        
+        // var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe1TqLz5DpnL22yvUWpsO58bAsvCy9q-2EsDFG5ywAd6zey4w/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent) + '&entry.308659857=' + encodeURIComponent(cartitems);
+
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSe1TqLz5DpnL22yvUWpsO58bAsvCy9q-2EsDFG5ywAd6zey4w/viewform?embedded=true&entry.1777040360=' + encodeURIComponent(timeSpent) + '&entry.308659857=' + encodeURIComponent(Array.from(cart));
 
         localStorage.clear();
         sessionStorage.clear();
@@ -233,12 +250,12 @@
     <h1>LOUIS VUITTON</h1>
     <!-- Update the version when pushing to check if the webpage has updated too -->
     <!-- <h3>Version 1.03</h3>  -->
-    <nav>
+    <!-- <nav>
       <ul>
         <!-- <li><a href="#">Home</a></li> -->
         <li><a href="contact.html" target="_blank">Contact</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <div id="timer-container">
       <div id="timer">Time left: 5:00</div>
     </div>
