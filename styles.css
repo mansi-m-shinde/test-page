@@ -24,6 +24,19 @@ body {
   z-index: 1000;
 }
 
+.fixed-header-survey {
+  background-color: #362b18;
+  color: #fff;
+  padding: 0.25rem 0;
+  font-size: 0.85rem;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
 .header-image-container {
   margin-top: 270px; /* Adjust this based on the height of the fixed header */
 }
@@ -140,7 +153,7 @@ footer {
 
 p.centered-text {
   text-align: center; /* Center align the text */
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 #survey-container {
@@ -215,7 +228,7 @@ p.centered-text {
 }
 
 .survey-content {
-  margin-top: 120px; /* Adjust to avoid content being hidden behind the fixed header and timer */
+  margin-top: 100px; /* Adjust to avoid content being hidden behind the fixed header and timer */
   padding: 1rem;
 }
 
