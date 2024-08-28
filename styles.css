@@ -215,7 +215,7 @@ p.centered-text {
 }
 
 .survey-content {
-  margin-top: 250px; /* Adjust to avoid content being hidden behind the fixed header and timer */
+  margin-top: 120px; /* Adjust to avoid content being hidden behind the fixed header and timer */
   padding: 1rem;
 }
 
@@ -313,6 +313,10 @@ button.added-to-cart {
   height: 0;
   padding-bottom: 75%; /* Adjust this percentage to change the aspect ratio */
   overflow: hidden;
+}
+
+#surveyIframe {
+  width: 100%; /* Make iframe take full width of the container */
 }
 
 .form-container iframe {
