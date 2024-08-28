@@ -495,8 +495,16 @@ button.added-to-cart {
   }
 
   #survey-container {
-    font-size: 18px;
+    font-size: 12px;
     padding: 10px 0;
+  }
+
+  #survey-title{
+    padding: 5px 10px;
+  }
+
+  .fixed-header{
+    padding: 0.25rem 0;
   }
 }
 
