@@ -45,10 +45,28 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: 240px;
+  margin-top: 180px;
 }
 
 .header-image-survey {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 240px;
+}
+
+.retailheader-image-container {
+  margin-top: 270px; /* Adjust this based on the height of the fixed header */
+}
+
+.retailheader-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 180px;
+}
+
+.retailheader-image-survey {
   display: block;
   width: 100%;
   height: auto;
@@ -481,7 +499,7 @@ button.added-to-cart {
   }
 
   .cart-icon-container {
-    top: 200px; /* Adjusted positioning for smaller screens */
+    top: 350px; /* Adjusted positioning for smaller screens */
     right: 10px; /* Reduced right margin */
     padding: 4px 8px; /* Smaller padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow for a subtler effect */
@@ -492,9 +510,32 @@ button.added-to-cart {
     height: 32px; /* Reduced height */
   }
 
+  #timer-container {
+    font-size: 16px;
+    padding: 7px 0;
+    top: 90px;
+  }
+
   .cart-counter {
     font-size: 16px; /* Smaller font size */
     padding: 2px 6px; /* Adjusted padding */
+  }
+
+  .header-image {
+    width: 150%;
+    position: relative;
+    left: -50%; /* Shift the image to the left */
+    max-width: none; /* Allow the image to exceed its container */
+    margin-top: 140px;
+  }
+
+  .retailheader-image {
+    margin-top: 140px;
+  }
+
+  .content {
+    margin-top: 30px; /* Adjust to avoid content being hidden behind the fixed header and timer */
+    padding: 1rem;
   }
 }
 
@@ -524,8 +565,9 @@ button.added-to-cart {
   }
 
   #timer-container {
-    font-size: 18px;
-    padding: 10px 0;
+    font-size: 16px;
+    padding: 5px 0;
+    top: 90px;
   }
 
   #survey-container {
@@ -542,7 +584,7 @@ button.added-to-cart {
   }
 
   .cart-icon-container {
-    top: 200px; /* Adjusted positioning for smaller screens */
+    top: 350px; /* Adjusted positioning for smaller screens */
     right: 10px; /* Reduced right margin */
     padding: 4px 8px; /* Smaller padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow for a subtler effect */
@@ -556,6 +598,23 @@ button.added-to-cart {
   .cart-counter {
     font-size: 16px; /* Smaller font size */
     padding: 2px 6px; /* Adjusted padding */
+  }
+
+  .header-image {
+    width: 150%;
+    position: relative;
+    left: -50%; /* Shift the image to the left */
+    max-width: none; /* Allow the image to exceed its container */
+    margin-top: 140px;
+  }
+
+  .retailheader-image {
+    margin-top: 140px;
+  }
+
+  .content {
+    margin-top: 30px; /* Adjust to avoid content being hidden behind the fixed header and timer */
+    padding: 1rem;
   }
 }
 
